@@ -56,10 +56,10 @@ $(document).ready(function(){
       }
   });
 
-      $("#weaBtn").click(function(){
-    if(currentDiv !== "#weather"){
-        slideRight("#weather");
-        slideLeft("#weaAbout");
+      $("#retBtn").click(function(){
+    if(currentDiv !== "#retro"){
+        slideRight("#retro");
+        slideLeft("#retAbout");
       }
   });
 
