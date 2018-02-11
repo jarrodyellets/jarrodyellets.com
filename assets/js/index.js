@@ -35,17 +35,17 @@ $(document).ready(function(){
     });
 
 
-  $("#calBtn").click(function(){
-    if(currentDiv !== "#calculator"){
-        slideRight("#calculator");
-        slideLeft("#calAbout");
+  $("#radBtn").click(function(){
+    if(currentDiv !== "#radio"){
+        slideRight("#radio");
+        slideLeft("#radAbout");
       }
   });
 
-  $("#twiBtn").click(function(){
-    if(currentDiv !== "#twitch"){
-        slideRight("#twitch");
-        slideLeft("#twiAbout");
+  $("#ligBtn").click(function(){
+    if(currentDiv !== "#light"){
+        slideRight("#light");
+        slideLeft("#ligAbout");
       }
   });
 
