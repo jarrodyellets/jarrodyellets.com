@@ -63,17 +63,17 @@ $(document).ready(function(){
       }
   });
 
-      $("#ticBtn").click(function(){
-    if(currentDiv !== "#tic"){
-        slideRight("#tic");
-        slideLeft("#ticAbout");
+      $("#tenBtn").click(function(){
+    if(currentDiv !== "#ten"){
+        slideRight("#ten");
+        slideLeft("#tenAbout");
       }
   });
 
-      $("#pomBtn").click(function(){
-    if(currentDiv !== "#pomodoro"){
-        slideRight("#pomodoro");
-        slideLeft("#pomAbout");
+      $("#newBtn").click(function(){
+    if(currentDiv !== "#newspaper"){
+        slideRight("#newspaper");
+        slideLeft("#newAbout");
       }
   });
 
