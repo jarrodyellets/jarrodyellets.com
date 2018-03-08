@@ -49,10 +49,10 @@ $(document).ready(function(){
       }
   });
 
-    $("#wikBtn").click(function(){
-    if(currentDiv !== "#wiki"){
-        slideRight("#wiki");
-        slideLeft("#wikAbout");
+    $("#hanBtn").click(function(){
+    if(currentDiv !== "#han"){
+        slideRight("#han");
+        slideLeft("#hanAbout");
       }
   });
 
@@ -116,7 +116,7 @@ $(document).ready(function(){
   function scroll_to(div){
     $('html, body').animate({
       scrollTop: $(div).offset().top
-      },500);
+      }, 500);
 }
 
   function slideRight(div){
