@@ -77,10 +77,10 @@ $(document).ready(function(){
       }
   });
 
-      $("#simBtn").click(function(){
-    if(currentDiv !== "#simon"){
-        slideRight("#simon");
-        slideLeft("#simAbout");
+      $("#strBtn").click(function(){
+    if(currentDiv !== "#strikes"){
+        slideRight("#strikes");
+        slideLeft("#strAbout");
       }
   });
 
