@@ -90,14 +90,7 @@ $(document).ready(function(){
       var bottom_of_window = $(window).scrollTop() + $(window).height();
 
         if( bottom_of_window > bottom_of_object ){
-            $('.html').animate({ opacity: 1 }, { duration: 1500 });
-            $('.css').animate({ opacity: 1 }, { duration: 1500 });
-            $('.javascript').animate({ opacity: 1 }, { duration: 1500 });
-            $('.jquery').animate({ opacity: 1 }, { duration: 1500 });
-            $('.bootstrap').animate({ opacity: 1 }, { duration: 1500 });
-            $('.node').animate({ opacity: 1 }, { duration: 1500 });  
-            $('.express').animate({ opacity: 1 }, { duration: 1500 });  
-            $('.mongo').animate({ opacity: 1 }, { duration: 1500 });       
+            $('.icon').animate({ opacity: 1 }, { duration: 1500 });      
         }       
     });
     $('#buttonDiv').each( function(i){
