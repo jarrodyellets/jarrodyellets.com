@@ -77,10 +77,10 @@ $(document).ready(function(){
       }
   });
 
-      $("#strBtn").click(function(){
-    if(currentDiv !== "#strikes"){
-        slideRight("#strikes");
-        slideLeft("#strAbout");
+      $("#mooBtn").click(function(){
+    if(currentDiv !== "#moog"){
+        slideRight("#moog");
+        slideLeft("#mooAbout");
       }
   });
 
