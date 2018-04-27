@@ -42,10 +42,10 @@ $(document).ready(function(){
       }
   });
 
-  $("#ligBtn").click(function(){
-    if(currentDiv !== "#light"){
-        slideRight("#light");
-        slideLeft("#ligAbout");
+  $("#pilBtn").click(function(){
+    if(currentDiv !== "#pillow"){
+        slideRight("#pillow");
+        slideLeft("#pilAbout");
       }
   });
 
