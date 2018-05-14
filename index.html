@@ -51,11 +51,11 @@
 		<div class="banner">
 			<h1 class="name">Jarrod Yellets</h1>
 			<div class="menu">
-			  <a href="mailto:jarrod@jarrodyellets.com" class="hvr-pop menu"><i class="fa fa-envelope" aria-hidden="true" title="mail icon"></i></i></a>
-			  <a href="https://github.com/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menu"><i class="fab fa-github" title="github icon"></i></a>
-			  <a href="https://codepen.io/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menu"><i class="fab fa-codepen" title="codepen icon"></i></a>
-			  <a href="https://twitter.com/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menu"><i class="fab fa-twitter" title="twitter icon"></i></a>
-			  <a href="https://www.linkedin.com/in/jarrod-yellets-59509447" target="_blank" rel="noopener" class="hvr-pop menu" id="linkedin"><i class="fab fa-linkedin-in" title="linken icon"></i></a>
+			  <a href="mailto:jarrod@jarrodyellets.com" class="hvr-pop menu" aria-label="mail-icon"><i class="fa fa-envelope" aria-hidden="true" itemprop="mail icon"></i></i></a>
+			  <a href="https://github.com/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menu" aria-label="github-icon"><i class="fab fa-github" itemprop="github icon"></i></a>
+			  <a href="https://codepen.io/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menu" aria-label="codepen-icon"><i class="fab fa-codepen" itemprop="codepen icon"></i></a>
+			  <a href="https://twitter.com/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menu" aria-label="twitter-icon"><i class="fab fa-twitter" itemprop="twitter icon"></i></a>
+			  <a href="https://www.linkedin.com/in/jarrod-yellets-59509447" target="_blank" rel="noopener" class="hvr-pop menu" aria-label="linkedin-icon"><i class="fab fa-linkedin-in" itemprop="linken icon"></i></a>
 			</div>
 			<p class="job">Developer</p>
 		</div>
@@ -184,18 +184,21 @@
          <p class="text">Fill out the form to submit a question, comment, or to inquire about a future project.  You can also reach me a <a href="mailto:jarrod@jarrodyellets.com">jarrod@jarrodyellets.com</a></p>
          <p class="text">Find me at the following places:</p>
          <div class="menuContact">
-			<a href="https://github.com/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menuContact"><i class="fab fa-github" title="github icon"></i></a>
-			<a href="https://codepen.io/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menuContact"><i class="fab fa-codepen" title="codepen icon"></i></a>
-			<a href="https://twitter.com/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menuContact"><i class="fab fa-twitter" title="twitter icon"></i></a>
-			<a href="https://www.linkedin.com/in/jarrod-yellets-59509447" target="_blank" rel="noopener" class="hvr-pop menuContact"><i class="fab fa-linkedin-in" title="linken icon"></i></a>
+			<a href="https://github.com/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menuContact" aria-label="githubIcon"><i class="fab fa-github" itemprop="github icon"></i></a>
+			<a href="https://codepen.io/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menuContact" aria-label="codepenIcon"><i class="fab fa-codepen" itemprop="codepen icon"></i></a>
+			<a href="https://twitter.com/jarrodyellets" target="_blank" rel="noopener" class="hvr-pop menuContact" aria-label="twitterIcon"><i class="fab fa-twitter" itemprop="twitter icon"></i></a>
+			<a href="https://www.linkedin.com/in/jarrod-yellets-59509447" target="_blank" rel="noopener" class="hvr-pop menuContact" aria-label="linkenIcon"><i class="fab fa-linkedin-in" itemprop="linken icon"></i></a>
 		</div>
        </div>
       <div class="col-sm-6 section-row contactForm">
 	      <form method="POST" action="https://formspree.io/jarrod@jarrodyellets.com">
 					<div class="form-group">
-						<input type="text" class="form-control input" name="name" placeholder="Name" required>
-						<input type="email" class="form-control input" name="email" placeholder="Email" required>
-						<textarea class="form-control input" name="message" placeholder="Message" required></textarea>
+						<label for="name">Name</label>
+							<input type="text" class="form-control input" name="name" placeholder="Name" id="name" required>
+						<label for="email">Email</label>
+							<input type="email" class="form-control input" name="email" placeholder="Email" id="email" required>
+						<label for="message">Message</label>
+							<textarea class="form-control input" name="message" placeholder="Message" id="message" required></textarea>
 						<button type="submit" class="btn btn-default">Submit</button>
 					</div>
 				</form>
@@ -208,5 +211,6 @@
     		<p>&copy; Jarrod Yellets | 2018</p>
   	</div>
    </footer>
+	<noscript>Your browser must run JavaScript to view this page.</noscript>
 </body>
 </html>
