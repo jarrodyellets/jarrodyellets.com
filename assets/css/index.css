@@ -421,10 +421,11 @@ label {
 	.contact {
 		text-align: center;
 	}
-
-
-
-
+	
+	.contactForm {
+		text-align: left;
+		margin-top: 20px;
+	}
 
 }
 
