@@ -115,6 +115,7 @@ $(document).ready(function(){
   function slideRight(div){
       $(currentDiv).toggleClass("hid", 300, "linear");
       $(currentDiv).toggleClass("center", 300, "linear");
+      $(div).addClass("screen");
       currentDiv = div;
       $(div).delay(300).toggleClass("hid", 300, "linear");
       $(div).toggleClass("center", 50, "linear");
