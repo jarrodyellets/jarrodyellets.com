@@ -383,6 +383,10 @@ label {
   	transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1);
 	}
 
+	.rollOver, .rolloverShow {
+		display: none;
+	}
+
 	.width {
 		right: 0;
 	}
