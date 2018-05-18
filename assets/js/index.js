@@ -83,17 +83,6 @@ $(document).ready(function(){
         if( bottom_of_window > bottom_of_object ){
             $('.icon').animate({ opacity: 1 }, { duration: 1500 });      
         }       
-    });
-    $('#buttonDiv').each( function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-        if( bottom_of_window > bottom_of_object ){
-            $("#calBtn").slideDown(500);       
-            $("#twiBtn").slideDown(500);       
-            $("#wikBtn").slideDown(500);      
-            $("#weaBtn").slideDown(500);      
-        }       
     }); 
   });
 
@@ -104,12 +93,12 @@ $(document).ready(function(){
 }
 
   function slideRight(div){
-      $(currentDiv).toggleClass("hid", 300, "linear");
-      $(currentDiv).toggleClass("center", 300, "linear");
+      $(currentDiv).toggleClass("hid");
+      $(currentDiv).toggleClass("center");
       $(div).addClass("screen");
       currentDiv = div;
-      $(div).delay(300).toggleClass("hid", 300, "linear");
-      $(div).toggleClass("center", 50, "linear");
+      $(div).delay(300).toggleClass("hid");
+      $(div).toggleClass("center");
 
 
   }

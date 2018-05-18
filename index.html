@@ -10,12 +10,7 @@
 	<link rel="icon" href="https://www.jarrodyellets.com/images/polaroidprofileIcon.png">
 	<title>Jarrod Yellets</title>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.ripples.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" async="true"></script>
-	<script
-  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
-  integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
-  crossorigin="anonymous" async="true"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
 	<script type="text/javascript" src="assets/js/index.js"></script>
@@ -41,9 +36,9 @@
 				</div>
 				<div class="navLinks">
 					<a href="javascript:void(0)" class="closeBtn"><i class="fas fa-times"></i></a>
-					<a href="#products" class="links">About</a>
-					<a href="#about" class="links aboutLink">Portfolio</a>
-					<a href="#contact" class="links contactLink">Contact</a>
+					<a id="about" class="links hvr-pop">About</a>
+					<a id="portfolio" class="links hvr-pop">Portfolio</a>
+					<a id="contact" class="links hvr-pop">Contact</a>
 				</div>
 				<a href="javascript:void(0);" 
 			   class="hamburger"><i class="fas fa-bars"></i></a>
@@ -184,12 +179,12 @@
 	      <form method="POST" action="https://formspree.io/jarrod@jarrodyellets.com">
 					<div class="form-group">
 						<label for="name">Name</label>
-							<input type="text" class="form-control input" name="name" placeholder="Name" id="name" required>
+							<input type="text" class="form-control input" name="name" id="name" required>
 						<label for="email">Email</label>
-							<input type="email" class="form-control input" name="email" placeholder="Email" id="email" required>
+							<input type="email" class="form-control input" name="email" id="email" required>
 						<label for="message">Message</label>
-							<textarea class="form-control input" name="message" placeholder="Message" id="message" required></textarea>
-						<button type="submit" class="btn btn-default">Submit</button>
+							<textarea class="form-control input" name="message" id="message" required></textarea>
+						<button type="submit" class="button">Submit</button>
 					</div>
 				</form>
       	</div>

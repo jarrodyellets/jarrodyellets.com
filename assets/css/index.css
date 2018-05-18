@@ -104,7 +104,7 @@ body {
 	border: 1px solid #333;
 	border-radius: 1px;
 	outline: none;
-	font-size: 1.2em;
+	font-size: 1em;
 	padding: 5px 10px;
 	margin: 0 5px;
 	color: #333;
@@ -256,9 +256,14 @@ label {
 	width: 100%;
 }
 
+.links:hover {
+	color: #DEDEDE;
+	text-decoration: none;
+}
+
 .navIcons {
 	display: flex;
-	font-size: 1.3em;
+	font-size: 1.4em;
 }
 
 .menu {
@@ -323,7 +328,7 @@ label {
 
 @media screen and (max-width: 860px){
 	.button {
-		font-size: .9em;
+		font-size: 1em;
 	}
 }
 
@@ -339,14 +344,16 @@ label {
 
 	.navLinks {
 		height: 100%;
-		width: 200px;
+		width: 170px;
 		position: fixed;
 		z-index: 5;
 		top: 0;
-		right: -200px;
+		right: -170px;
 		display: flex;
 		flex-direction: column;
-		background: #faf9f5;
+		background: #353535;
+		color: #DEDEDE;
+		font-size: 1.2em;
 		overflow-x: hidden;
 		padding-top: 60px;
 		padding-left: 10px;
@@ -375,15 +382,17 @@ label {
 		display: block;
 		top: 15px;
 		right: 25px;
-	}
-
-	.name {
-		font-size: 5em;
+		color: #DEDEDE;
+		font-size: 1.4em;
 	}
 
 	.icon {
 		font-size: .8em;
 		padding: 3px;
+	}
+
+	.text {
+		text-align: center;
 	}
 
 	.portTitle {
@@ -395,7 +404,7 @@ label {
 	}
 
 	.button {
-		font-size: 1.4em;
+		font-size: 1em;
 		padding: 3px;
 		margin: 0 3px;
 	}
