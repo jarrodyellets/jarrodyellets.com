@@ -3,7 +3,8 @@ html {
 }
 
 body {
-	background-color: #E8E8E8;
+	background-color: #e8e8e8;
+	color: #272727;
   height: 100%;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
@@ -57,7 +58,7 @@ body {
 
 .aboutRow {
 	margin: 0 auto;
-	padding: 30px;
+	padding: 0 30px 30px 30px;
 }
 
 .icon {
@@ -67,7 +68,7 @@ body {
 }
 
 .text {
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 .about {
@@ -432,8 +433,8 @@ label {
 	}
 
 	.button {
-		font-size: 1em;
-		padding: 3px;
+		font-size: 1.1em;
+		padding: 2px;
 		margin: 0 3px;
 	}
 
