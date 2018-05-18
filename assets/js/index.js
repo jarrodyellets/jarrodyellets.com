@@ -2,6 +2,8 @@ $(document).ready(function(){
 
   var currentDiv = "#laptop"
   var currentPort = "#filler";
+  var zIndex = 1;
+  var topPic = ""
 
  	$('#navLinks').slideDown("slow");
   $(".name").delay(200).slideDown("slow");
@@ -24,6 +26,42 @@ $(document).ready(function(){
 
   $(".closeBtn").click(function(){
     $(".navLinks").removeClass("width");
+  });
+
+  $("#about").mouseenter(function(){
+    if(topPic != "about"){
+      $("#rolloverAbout").removeClass("rolloverShow");
+      $("#rolloverAbout").css('z-index', zIndex);
+      zIndex++
+      setTimeout(function(){
+        topPic = "about";
+        $("#rolloverAbout").addClass("rolloverShow");
+      }, 10)
+    }
+  });
+
+  $("#portfolio").mouseenter(function(){
+    if(topPic != "portfolio"){
+      $("#rolloverPortfolio").removeClass("rolloverShow");
+      $("#rolloverPortfolio").css('z-index', zIndex);
+      zIndex++
+      setTimeout(function(){
+        topPic = "portfolio";
+        $("#rolloverPortfolio").addClass("rolloverShow");
+      }, 10)
+    }
+  });
+
+  $("#contact").mouseenter(function(){
+    if(topPic != "contact"){
+      $("#rolloverContact").removeClass("rolloverShow");
+      $("#rolloverContact").css('z-index', zIndex);
+      zIndex++
+      setTimeout(function(){
+        topPic = "contact";
+        $("#rolloverContact").addClass("rolloverShow");
+      }, 10)
+    }
   });
 
   $("#radBtn").click(function(){

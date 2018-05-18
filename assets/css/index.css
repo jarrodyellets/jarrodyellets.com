@@ -14,6 +14,7 @@ body {
 
 
 .main-window {
+	position: relative;
 	background-image: url("https://www.jarrodyellets.com/images/sidewalkBack.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -29,14 +30,23 @@ body {
 	color: #DEDEDE;
 }
 
-.job {
-	font-size: 3em;
-	display: none;
+.rollover {
+	width: 25vw;
+	position: absolute;
+	top: 15%;
+	right: -600px;
+}
+
+.rolloverShow {
+	right: 100px;
+	animation: rollover 700ms;
 }
 
 .title {
 	text-align: center;
 	margin: 20px 0;
+	font-weight: 700;
+	font-size: 2em;
 }
 
 .frontEnd, .backEnd {
@@ -194,8 +204,8 @@ body {
 
 .heading {
 	text-align: center;
-	font-size: 2em;
-	text-decoration: underline;
+	font-size: 1.5em;
+	font-weight: 700;
 }
 
 label {
@@ -294,6 +304,15 @@ label {
 
 .closeBtn {
 	display: none;
+}
+
+@keyframes rollover {
+	0% {
+		transform: translateX(700px);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }
 
 @-webkit-keyframes hvr-pop {
