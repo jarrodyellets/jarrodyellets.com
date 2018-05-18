@@ -2,22 +2,6 @@ $(document).ready(function(){
 
   var currentDiv = "#laptop"
   var currentPort = "#filler";
-  
-  $(".main-window").ripples({
-    resolution: 512,
-    dropRadius: 20, 
-    perturbance: 0.01,
-    interactive: false 
-  });
-
-  setInterval(function() {
-    var $el = $('.main-window');
-    var x = Math.random() * $el.outerWidth();
-    var y = Math.random() * $el.outerHeight();
-    var dropRadius = 30;
-    var strength = 0.1 + Math.random() * 0.05;
-    $el.ripples('drop', x, y, dropRadius, strength);
-  }, 400);
 
  	$('#navLinks').slideDown("slow");
   $(".name").delay(200).slideDown("slow");
@@ -34,6 +18,13 @@ $(document).ready(function(){
       scroll_to(".contact")
     });
 
+  $(".hamburger").click(function(){
+    $(".navLinks").addClass("width");
+  });
+
+  $(".closeBtn").click(function(){
+    $(".navLinks").removeClass("width");
+  });
 
   $("#radBtn").click(function(){
     if(currentDiv !== "#radio"){
