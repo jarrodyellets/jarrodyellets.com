@@ -373,6 +373,11 @@ label {
 		padding: 10px 0;
 	}
 
+	.menu {
+		margin: 0 3vw;
+		color: #DEDEDE;
+}
+
 	.hamburger {
 		display: block;
 	}
