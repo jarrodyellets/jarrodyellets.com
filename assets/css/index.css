@@ -274,7 +274,7 @@ label {
 
 .navIcons {
 	display: flex;
-	font-size: 1.4em;
+	font-size: 1.5em;
 }
 
 .menu {
@@ -400,6 +400,10 @@ label {
 	.menu {
 		margin: 0 3vw;
 		color: #DEDEDE;
+}
+
+.navIcons {
+	font-size: 1.9em;
 }
 
 	.hamburger {
