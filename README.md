@@ -1,6 +1,6 @@
 # Portfolio Page
 
-<figure><img src="http://www.jarrodyellets.com/images/portfolio.png" alt="Moog Drum Machine" style="width: 80%; display: block; margin-left: auto; margin-right: auto;"/></figure>
+<figure><img src="http://www.jarrodyellets.com/images/portfolio.png" alt="Portfolio Page" style="width: 80%; display: block; margin-left: auto; margin-right: auto;"/></figure>
 
 ## View
 - [Click to View Site](https://www.jarrodyellets.com)
