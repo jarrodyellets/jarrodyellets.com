@@ -5,18 +5,18 @@ $(document).ready(function(){
   var zIndex = 1;
   var topPic = ""
 
- 	$('#navLinks').slideDown("slow");
+  $('#navLinks').slideDown("slow");
   $(".name").delay(200).slideDown("slow");
   $(".menu").delay(400).slideDown("slow");
   $(".job").delay(600).slideDown("slow");
 
-	$('#about').click(function(){
+  $('#about').click(function(){
       scroll_to(".about");
     });
-	$('#portfolio').click(function(){
+  $('#portfolio').click(function(){
       scroll_to(".portfolio");
     });
-	$('#contact').click(function(){
+  $('#contact').click(function(){
       scroll_to(".contact")
     });
 
