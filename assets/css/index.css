@@ -191,8 +191,17 @@ p {
   text-align: center;
 }
 
+.contactText {
+  font-size: 1.7em;
+}
+
 .contactIcons {
   margin-bottom: 50px;
+}
+
+.contactImage {
+  margin: 0 20px;
+  width: 60px;
 }
 
 .contactEmail {
