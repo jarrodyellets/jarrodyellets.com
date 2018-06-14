@@ -26,6 +26,10 @@ $(document).ready(function(){
     $(".navLinks").removeClass("width");
   });
 
+  $(".hvr-underline-from-left:before").mouseleave(function(){
+    $(".hvr-underline-from-left:before").css("opacity", "0");
+  })
+
   $("#about").mouseenter(function(){
     if(topPic != "about"){
       $("#rolloverAbout").removeClass("rolloverShow");

@@ -139,6 +139,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
 .portfolioImg {
@@ -171,11 +172,9 @@ p {
   padding: 5px 10px;
   margin: 0 5px;
   color: var(--purple);
-  transition: all 1s;
 }
 
 .btn:hover {
-  opacity: .4;
   color: var(--purple);
 }
 
@@ -233,18 +232,6 @@ p {
   margin: 0 30px;
   font-size: 18px;
   cursor: pointer;
-}
-
-.top {
-  margin-top: 10px;
-}
-
-.bottom {
-  margin-bottom: 10px;
-}
-
-#linkedin {
-  padding-right: 0;
 }
 
 .menuContact {
@@ -327,6 +314,35 @@ p {
   display: none;
 }
 
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(10px) translateZ(0);
+  transform: perspective(5px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  top: 50%;
+  opacity: 0;
+  background: var(--purple);
+  height: 4px;
+  border-radius: 40%;
+  transition: opacity .15s, right .6s;
+  -webkit-transition: opacity .15s, right .6;
+}
+
+.hvr-underline-from-left:hover:before {
+  right: 0;
+  opacity: 1;
+}
+
 @keyframes strike{
   0%   { width : 0; }
   100% { width: 100%; }
@@ -375,6 +391,21 @@ p {
   .portfolioGrid {
     grid-template-columns: repeat(2, 1fr)
   }
+
+  .aboutWrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .me, .stack {
+    width: 80%;
+  }
+
+  .divider {
+    font-size: 1.8em;
+  }
 }
 
 @media screen and (max-width: 860px){
@@ -385,12 +416,16 @@ p {
 
 @media screen and (max-width: 768px){
   body{
-    font-size: 10px;
+    font-size: 20px;
   }
 
   .main-window {
     margin: 0;
     height: 100%;
+  }
+
+  .nav-bar {
+    font-size: .5em;
   }
 
   .navLinks {
@@ -450,33 +485,24 @@ p {
     font-size: 1.4em;
   }
 
-  .icon {
-    font-size: .8em;
-    padding: 3px;
-  }
-
   .text {
     text-align: center;
   }
 
-  .title {
-    font-size: 1.2em;
+  .titleImg {
+    width: 300px;
   }
 
-  #aboutTitle {
-    margin-top: 20px;
+  .toolsLeft {
+    margin-right: 50px;
   }
 
-  .portTitle {
-    font-size: 1.2em;
+  .portfolioImg {
+    max-width: 310px;
   }
 
-  .portfolioText {
-    margin-top: 10px;
-  }
-
-  .portfolioGrid {
-    grid-template-columns: repeat(1, 1fr)
+  .portfolioItem {
+    max-width: 310px;
   }
 
   .button {
@@ -485,18 +511,35 @@ p {
     margin: 0 2px;
   }
 
-  .top {
-    margin-top: 20px;
-  }
-
   .contact {
-    text-align: center;
+    padding: 0 20px;
   }
   
-  .contactForm {
-    text-align: left;
-    margin-top: 20px;
+  .contactImage {
+    margin: 0 10px;
+    width: 40px;
   }
+
+  .contactEmail {
+    font-size: 1.8em;
+  }
+
+  .arrow {
+    position: relative;
+    margin: 50px auto 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+@media screen and (max-width: 700px) {
+  .portfolioGrid {
+    grid-template-columns: repeat(1, 1fr)
+  }
+
+  .divider {
+    font-size: 1.2em;
+  }
+}
 
 }
 
