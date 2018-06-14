@@ -130,6 +130,7 @@ p {
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 90px;
   margin-top: 80px;
+  justify-items: center;
 }
 
 .portfolioItem {
@@ -370,6 +371,12 @@ p {
   animation-iteration-count: 1;
 } 
 
+@media screen and (max-width: 1100px){
+  .portfolioGrid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
 @media screen and (max-width: 860px){
   .button {
     font-size: 1em;
@@ -424,11 +431,11 @@ p {
   .menu {
     margin: 0 3vw;
     color: #DEDEDE;
-}
+  }
 
-.navIcons {
-  font-size: 1.9em;
-}
+  .navIcons {
+    font-size: 1.9em;
+  }
 
   .hamburger {
     display: block;
@@ -466,6 +473,10 @@ p {
 
   .portfolioText {
     margin-top: 10px;
+  }
+
+  .portfolioGrid {
+    grid-template-columns: repeat(1, 1fr)
   }
 
   .button {
