@@ -5,11 +5,6 @@ $(document).ready(function(){
   var zIndex = 1;
   var topPic = ""
 
-  $('#navLinks').slideDown("slow");
-  $(".name").delay(200).slideDown("slow");
-  $(".menu").delay(400).slideDown("slow");
-  $(".job").delay(600).slideDown("slow");
-
   $('#about').click(function(){
       scroll_to(".about");
     });
@@ -19,6 +14,9 @@ $(document).ready(function(){
   $('#contact').click(function(){
       scroll_to(".contact")
     });
+  $('.arrow').click(function(){
+    $('html, body').animate({scrollTop: '0px'}, 500);
+  })
 
   $(".hamburger").click(function(){
     $(".navLinks").addClass("width");
@@ -64,93 +62,10 @@ $(document).ready(function(){
     }
   });
 
-  $("#radBtn").click(function(){
-    if(currentDiv !== "#radio"){
-        slideRight("#radio");
-        slideLeft("#radAbout");
-      }
-  });
-
-  $("#pilBtn").click(function(){
-    if(currentDiv !== "#pillow"){
-        slideRight("#pillow");
-        slideLeft("#pilAbout");
-      }
-  });
-
-    $("#hanBtn").click(function(){
-    if(currentDiv !== "#han"){
-        slideRight("#han");
-        slideLeft("#hanAbout");
-      }
-  });
-
-      $("#retBtn").click(function(){
-    if(currentDiv !== "#retro"){
-        slideRight("#retro");
-        slideLeft("#retAbout");
-      }
-  });
-
-      $("#tenBtn").click(function(){
-    if(currentDiv !== "#ten"){
-        slideRight("#ten");
-        slideLeft("#tenAbout");
-      }
-  });
-
-      $("#newBtn").click(function(){
-    if(currentDiv !== "#newspaper"){
-        slideRight("#newspaper");
-        slideLeft("#newAbout");
-      }
-  });
-
-      $("#mooBtn").click(function(){
-    if(currentDiv !== "#moog"){
-        slideRight("#moog");
-        slideLeft("#mooAbout");
-      }
-  });
-
-  $(window).scroll(function(){
-    $('.icon').each( function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-        if( bottom_of_window > bottom_of_object ){
-            $('.icon').animate({ opacity: 1 }, { duration: 1500 });      
-        }       
-    }); 
-  });
-
   function scroll_to(div){
     $('html, body').animate({
       scrollTop: $(div).offset().top
       }, 500);
 }
-
-  function slideRight(div){
-      $(currentDiv).toggleClass("hid");
-      $(currentDiv).toggleClass("center");
-      $(div).addClass("screen");
-      currentDiv = div;
-      $(div).delay(300).toggleClass("hid");
-      $(div).toggleClass("center");
-
-
-  }
-
-  function slideLeft(div){
-    if(currentPort === "#filler"){
-      $(currentPort).animate({opacity: 0}, 300);
-    }
-    $(currentPort).toggleClass("hidRight", 300, "linear");
-    currentPort = div;
-    $(div).delay(300).toggleClass("hidRight", 300, "linear")
-
-  }
-
-
 
 });
