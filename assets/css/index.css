@@ -108,7 +108,7 @@ body {
 }
 
 .text {
-  font-size: .8em;
+  font-size: .85em;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.6;
@@ -162,6 +162,7 @@ p {
 .builtWith {
   color: var(--red);
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .buttonWrapper {
@@ -499,7 +500,8 @@ p {
   }
 
   .text {
-    text-align: center;
+    font-size: 1em;
+    font-weight: 700;
   }
 
   .titleImg {
