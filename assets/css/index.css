@@ -179,9 +179,10 @@ p {
   color: var(--purple);
 }
 
-.btn:focus {
+.btn:focus, .btn:active {
   color: var(--purple);
-  outline: none;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .contact {
@@ -341,10 +342,12 @@ p {
   -webkit-transition: opacity .15s, right .3;
 }
 
-.hvr-underline-from-left:hover:before {
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
   right: 0;
   opacity: 1;
+  outline: none !important;
 }
+
 
 @keyframes strike{
   0%   { width : 0; }
