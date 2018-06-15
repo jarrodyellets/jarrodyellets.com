@@ -4,7 +4,6 @@ $(document).ready(function(){
   var currentPort = "#filler";
   var zIndex = 1;
   var topPic = "";
-  var colors = ["rgba(22, 21, 19, .7)", "rgba(248, 22, 33, .7)", "rgba(16, 97, 202, .7)", "rgba(1, 145, 94, .7)", "rgba(130, 4, 104, .7)"]
 
   $('#about').click(function(){
       scroll_to(".about");
