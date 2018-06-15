@@ -67,6 +67,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  padding: 0 20px;
 }
 
 .subHeader {
@@ -103,10 +104,15 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 50%;
+  margin-right: 50px;
 }
 
 .text {
-  font-size: 1.2em;
+  font-size: .8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.6;
+  letter-spacing: 5px;
 }
 
 p {
@@ -407,6 +413,7 @@ p {
 
   .me, .stack {
     width: 80%;
+    margin-right: 0;
   }
 
   .divider {
