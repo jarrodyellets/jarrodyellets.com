@@ -2,7 +2,7 @@
   --black: rgba(22, 21, 19, .7);
   --red: rgba(248, 22, 33, .7);
   --blue: rgba(16, 97, 202, .7);
-  --green: rgba(1, 145, 94, .7);
+  --green: rgba(1, 145, 94, 1);
   --purple: rgba(130, 4, 104, .7);
 }
 
@@ -223,6 +223,7 @@ p {
   bottom: 0;
   right: 10px;
   cursor: pointer;
+  width: 100px;
 }
 
 .links {
