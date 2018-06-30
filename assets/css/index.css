@@ -231,6 +231,7 @@ p {
   right: 10px;
   cursor: pointer;
   width: 100px;
+  filter: opacity(70%);
 }
 
 .links {
