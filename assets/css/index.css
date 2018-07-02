@@ -282,6 +282,7 @@ p {
 .menu {
   margin: 0 1.5vw;
   color: #DEDEDE;
+  border-radius: 50%;
 }
 
 .navLinks {
