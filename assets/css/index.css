@@ -309,6 +309,18 @@ p {
   text-decoration: none;
 }
 
+#about:hover {
+  transform: rotate(5deg);
+}
+
+#portfolio:hover {
+  transform: rotate(-3deg);
+}
+
+#contact:hover {
+  transform: rotate(2deg);
+}
+
 .hamburger {
   display: none;
   text-decoration: none;
