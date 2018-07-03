@@ -502,6 +502,10 @@ p {
     transform: none;
   }
 
+  #mail-icon {
+    margin-left: 0;
+  }
+
   .menu {
     margin: 0 3vw;
     color: #DEDEDE;
