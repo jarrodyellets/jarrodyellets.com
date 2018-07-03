@@ -282,7 +282,6 @@ p {
 .menu {
   margin: 0 1.5vw;
   color: #DEDEDE;
-  border-radius: 50%;
 }
 
 .navLinks {
@@ -475,6 +474,11 @@ p {
 
   .rollOver, .rolloverShow {
     display: none;
+  }
+
+  .links:hover {
+    color: #DEDEDE;
+    background: rgba(0, 0, 0, 0);
   }
 
   .width {
