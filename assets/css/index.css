@@ -476,11 +476,6 @@ p {
     display: none;
   }
 
-  .links:hover {
-    color: #DEDEDE;
-    background: rgba(0, 0, 0, 0);
-  }
-
   .width {
     right: 0;
   }
@@ -488,6 +483,23 @@ p {
   .links {
     display: inline-block;
     padding: 10px 0;
+  }
+
+  .links:hover {
+    color: #DEDEDE;
+    background: rgba(0, 0, 0, 0);
+  }
+
+  #about:hover {
+    transform: none;
+  }
+  
+  #portfolio:hover {
+    transform: none;
+  }
+  
+  #contact:hover {
+    transform: none;
   }
 
   .menu {
