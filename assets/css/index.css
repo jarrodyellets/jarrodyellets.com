@@ -354,7 +354,7 @@ p {
   height: 3px;
   border-radius: 40%;
   transition: opacity .15s, right .25s;
-  -webkit-transition: opacity .15s, right .25s;
+  -webkit-transition: opacity .15s, right .35s;
 }
 
 .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
