@@ -385,6 +385,37 @@ p {
   transition-delay: .25s;
 }
 
+.mail-underline {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(10px) translateZ(0);
+  transform: perspective(5px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.mail-underline:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 100%;
+  bottom: 10px;
+  opacity: 0;
+  background: var(--blue);
+  height: 3px;
+  border-radius: 40%;
+  transition: opacity .15s, right .25s;
+  -webkit-transition: opacity .15s, right .25s;
+}
+
+.mail-underline:hover:before, .mail-underline:focus:before, .mail-underline:active:before {
+  right: 0%;
+  opacity: 1;
+  outline: none !important;
+}
+
 @keyframes strike{
   0%   { width : 0; }
   100% { width: 100%; }
