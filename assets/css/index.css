@@ -401,12 +401,14 @@ p {
   z-index: 1;
   left: 0;
   right: 100%;
-  bottom: 10px;
+  bottom: 20px;
   opacity: 0;
   background: var(--blue);
   height: 3px;
-  border-radius: 40%;
-  transition: opacity .15s, right .25s;
+  border-radius: 20%;
+  transform: rotate(1deg);
+  transform-origin: top left;
+  transition: opacity .15s, right .35s;
   -webkit-transition: opacity .15s, right .25s;
 }
 
@@ -414,6 +416,30 @@ p {
   right: 0%;
   opacity: 1;
   outline: none !important;
+}
+
+.mail-underline:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 100%;
+  right: 0;
+  bottom: 11px;
+  opacity: 1;
+  background: var(--blue);
+  height: 3px;
+  border-radius: 5px;
+  transform: rotate(-5deg);
+  transform-origin: bottom right;
+  transition: opacity .10s, left .15s;
+  -webkit-transition: opacity .10s, left .15s;
+}
+
+.mail-underline:hover:after, .mail-underline:focus:after, .mail-underline:active:after {
+  left: 70%;
+  opacity: 1;
+  outline: none !important;
+  transition-delay: .20s;
 }
 
 .social-hover {
