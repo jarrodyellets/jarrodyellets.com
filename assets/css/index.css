@@ -416,6 +416,60 @@ p {
   outline: none !important;
 }
 
+.social-hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(10px) translateZ(0);
+  transform: perspective(5px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-hover:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 43%;
+  bottom: 60%;
+  opacity: 0;
+  background: var(--black);
+  height: 0;
+  width: 5px;
+  border-radius: 40%;
+  transition: height .1s;
+  -webkit-transition: height .1s;
+}
+
+.social-hover:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 40%;
+  opacity: 1;
+  background: var(--black);
+  height: 0px;
+  width: 5px;
+  border-radius: 40%;
+  transition: height .1s;
+  -webkit-transition: height .1s;
+}
+
+.social-hover:hover:before, .social-hover:focus:before, .social-hover:active:before {
+  height: 13px;
+  opacity: 1;
+  outline: none !important;
+}
+
+.social-hover:hover:after, .social-hover:focus:after, .social-hover:active:after {
+  height: 11px;
+  opacity: 1;
+  outline: none !important;
+  transition-delay: .25s;
+}
+
 @keyframes strike{
   0%   { width : 0; }
   100% { width: 100%; }
