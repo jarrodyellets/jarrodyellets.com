@@ -707,6 +707,31 @@ p {
     text-align: center;
   }
 
+  .hvr-underline-from-left:before {
+    height: 2px;
+  }
+
+  .hvr-underline-from-left:after {
+    height: 2px;
+  }
+
+  .social-hover:before {
+    width: 3px;
+  }
+
+  .social-hover:after {
+    width: 3px;
+  }
+
+  .mail-underline:before {
+    height: 2px;
+    bottom: 16px;
+  }
+
+  .mail-underline:after {
+    height: 2px;
+  }
+
 @media screen and (max-width: 700px) {
   .portfolioGrid {
     grid-template-columns: repeat(1, 1fr)
