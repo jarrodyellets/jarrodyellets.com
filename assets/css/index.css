@@ -466,7 +466,7 @@ p {
   opacity: 0;
   background: var(--black);
   height: 0;
-  width: 5px;
+  width: 4px;
   border-radius: 40%;
   transition: height .1s;
   -webkit-transition: height .1s;
@@ -481,7 +481,7 @@ p {
   opacity: 1;
   background: var(--black);
   height: 0px;
-  width: 5px;
+  width: 4px;
   border-radius: 40%;
   transition: height .1s;
   -webkit-transition: height .1s;
