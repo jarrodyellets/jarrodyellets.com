@@ -351,6 +351,8 @@ p {
   bottom: 10px;
   opacity: 0;
   background: var(--purple);
+  transform: rotate(1deg);
+  transform-origin: top left;
   height: 3px;
   border-radius: 30%;
   transition: opacity .15s, right .25s;
@@ -366,6 +368,8 @@ p {
   bottom: 0;
   opacity: 0;
   background: var(--purple);
+  transform: rotate(.5deg);
+  transform-origin: top left;
   height: 3px;
   border-radius: 30%;
   transition: opacity .15s, right .25s;
