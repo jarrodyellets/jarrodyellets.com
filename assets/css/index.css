@@ -94,7 +94,7 @@ body {
 }
 
 .stackText {
-  font-size: 2.2em;
+  font-size: 2em;
   color: var(--blue);
 }
 
@@ -674,7 +674,7 @@ p {
   }
 
   .toolsLeft {
-    margin-right: 50px;
+    margin-right: 40px;
   }
 
   .portfolioImg {
