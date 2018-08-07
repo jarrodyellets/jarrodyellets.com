@@ -114,8 +114,8 @@ body {
   height: 3px;
   width: 0;
   border-radius: 40%;
-  -webkit-transition: width .5s;
-  transition: width .5s;
+  -webkit-transition: width 1s;
+  transition: width 1s;
 }
 
 .stack-hash.width:before {

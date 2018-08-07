@@ -66,6 +66,16 @@ $(document).ready(function(){
     }
   });
 
+  $(window).scroll(function(){
+    $('.aboutMe').each(function(i){
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+         if( bottom_of_window > bottom_of_object ){
+            $(".stack-hash").addClass("width");             
+        }       
+    }); 
+  });
+
   function scroll_to(div){
     $('html, body').animate({
       scrollTop: $(div).offset().top
