@@ -106,8 +106,8 @@ body {
   content: "";
   position: absolute;
   z-index: 1;
-  left: -13px;
-  top: 46%;
+  left: -15px;
+  top: 49%;
   opacity: 1;
   background: var(--blue);
   transform: rotate(-20deg);
