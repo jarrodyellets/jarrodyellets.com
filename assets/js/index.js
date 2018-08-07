@@ -67,14 +67,22 @@ $(document).ready(function(){
   });
 
   $(window).scroll(function(){
-    $('.aboutMe').each(function(i){
+    $('.about').each(function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
          if( bottom_of_window > bottom_of_object ){
-            $(".stack-hash").addClass("width");             
+            for (let j= 1; j < 11; j++){
+              addHash(j);
+            }             
         }       
     }); 
   });
+
+  function addHash(j){
+    setTimeout(function(){
+      $("#stack" + j).addClass("width");
+    }, 300 * j);
+  }
 
   function scroll_to(div){
     $('html, body').animate({

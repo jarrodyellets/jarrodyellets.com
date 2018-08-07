@@ -111,11 +111,12 @@ body {
   opacity: 1;
   background: var(--blue);
   transform: rotate(-20deg);
+  transform-origin: top left;
   height: 3px;
   width: 0;
   border-radius: 40%;
-  -webkit-transition: width 1s;
-  transition: width 1s;
+  -webkit-transition: width .1s;
+  transition: width .1s;
 }
 
 .stack-hash.width:before {
