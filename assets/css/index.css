@@ -98,6 +98,30 @@ body {
   color: var(--blue);
 }
 
+.stack-hash {
+  position: relative;
+}
+
+.stack-hash:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: -13px;
+  top: 46%;
+  opacity: 1;
+  background: var(--blue);
+  transform: rotate(-20deg);
+  height: 3px;
+  width: 0;
+  border-radius: 40%;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+.stack-hash.width:before {
+  width: 12px;
+}
+
 .me {
   display: flex;
   flex-direction: column;
