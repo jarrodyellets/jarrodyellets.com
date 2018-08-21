@@ -476,7 +476,7 @@ p {
   opacity: 0;
   background: var(--blue);
   height: 3px;
-  border-radius: 20%;
+  border-radius: 35%;
   transform: rotate(1deg);
   transform-origin: top left;
   transition: opacity .15s, right .35s;
@@ -484,7 +484,7 @@ p {
 }
 
 .mail-underline:hover:before, .mail-underline:focus:before, .mail-underline:active:before {
-  right: 0%;
+  right: 3px;
   opacity: 1;
   outline: none !important;
 }
@@ -494,12 +494,12 @@ p {
   position: absolute;
   z-index: 1;
   left: 100%;
-  right: 0;
+  right: 3px;
   bottom: 11px;
   opacity: 1;
   background: var(--blue);
   height: 3px;
-  border-radius: 5px;
+  border-radius: 35%;
   transform: rotate(-5deg);
   transform-origin: bottom right;
   transition: opacity .10s, left .15s;
