@@ -123,6 +123,31 @@ body {
   width: 12px;
 }
 
+.underlineWho, .underlineWhat {
+  position: relative;
+}
+
+.underlineWho:before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  left: 5px;
+  right: 100%;
+  bottom: 20px;
+  opacity: 1;
+  background: var(--red);
+  height: 3px;
+  border-radius: 40%;
+  transform: rotate(1deg);
+  transform-origin: top left;
+  transition: right .5s;
+  -webkit-transition: right .5s;
+}
+
+.underlineWho.right:before {
+  right: 5px;
+}
+
 .me {
   display: flex;
   flex-direction: column;
