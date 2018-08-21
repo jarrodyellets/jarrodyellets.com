@@ -86,7 +86,7 @@ $(document).ready(function(){
             for (let j= 1; j < 11; j++){
               addHash(j);
             }
-           }, 1600);             
+           }, 1300);             
         }       
     }); 
   });
