@@ -133,7 +133,7 @@ body {
   z-index: 1;
   left: 5px;
   right: 100%;
-  bottom: 15px;
+  bottom: 17%;
   opacity: 1;
   background: var(--red);
   height: 3px;
@@ -150,7 +150,7 @@ body {
   z-index: 1;
   left: 2px;
   right: 100%;
-  bottom: 17px;
+  bottom: 18%;
   opacity: 1;
   background: var(--red);
   height: 3px;
