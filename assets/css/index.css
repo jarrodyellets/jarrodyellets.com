@@ -693,6 +693,10 @@ p {
     right: 0;
   }
 
+  #about:hover, #portfolio:hover, #contact:hover {
+    box-shadow: none;
+  }
+
   .links {
     display: inline-block;
     padding: 10px 0;
