@@ -377,14 +377,24 @@ p {
 
 #about:hover {
   transform: rotate(5deg);
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
+
 }
 
 #portfolio:hover {
   transform: rotate(-3deg);
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
 }
 
 #contact:hover {
   transform: rotate(2deg);
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
 }
 
 .hamburger {
