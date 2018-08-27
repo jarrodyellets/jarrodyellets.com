@@ -410,13 +410,7 @@ p {
 }
 
 .hvr-underline-from-left {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(10px) translateZ(0);
-  transform: perspective(5px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
   position: relative;
-  overflow: hidden;
 }
 
 .hvr-underline-from-left:before {
@@ -428,12 +422,12 @@ p {
   bottom: 10px;
   opacity: 0;
   background: var(--purple);
-  transform: rotate(1deg);
+  /* transform: rotate(1.01deg); */
   transform-origin: top left;
   height: 3px;
   border-radius: 30%;
   transition: opacity .15s, right .25s;
-  -webkit-transition: opacity .15s, right .25s;
+  -webkit-transition: opacity .15s, right .25s linear;
 }
 
 .hvr-underline-from-left:after {
@@ -445,7 +439,7 @@ p {
   bottom: 0;
   opacity: 0;
   background: var(--purple);
-  transform: rotate(.5deg);
+  transform: rotate(.51deg);
   transform-origin: top left;
   height: 3px;
   border-radius: 30%;
@@ -456,7 +450,7 @@ p {
 .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
   right: 10px;
   opacity: 1;
-  outline: none !important;
+  outline: 1px solid transparent;
 }
 
 .hvr-underline-from-left:hover:after, .hvr-underline-from-left:focus:after, .hvr-underline-from-left:active:after {
@@ -496,7 +490,7 @@ p {
 .mail-underline:hover:before, .mail-underline:focus:before, .mail-underline:active:before {
   right: 3px;
   opacity: 1;
-  outline: none !important;
+  outline: 1px solid transparent;
 }
 
 .mail-underline:after {
@@ -510,7 +504,7 @@ p {
   background: var(--blue);
   height: 3px;
   border-radius: 35%;
-  transform: rotate(-5deg);
+  transform: rotate(-4.02deg);
   transform-origin: bottom right;
   transition: opacity .10s, left .15s;
   -webkit-transition: opacity .10s, left .15s;
@@ -518,8 +512,7 @@ p {
 
 .mail-underline:hover:after, .mail-underline:focus:after, .mail-underline:active:after {
   left: 70%;
-  opacity: 1;
-  outline: none !important;
+  outline: 1px solid transparent;
   transition-delay: .20s;
 }
 
