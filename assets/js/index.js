@@ -1,10 +1,9 @@
 $(document).ready(function(){
 
-  var currentDiv = "#laptop"
-  var currentPort = "#filler";
   var zIndex = 1;
   var topPic = "";
 
+  // Nav Bar auto scroll to section
   $('#about').click(function(){
       scroll_to(".about");
     });
@@ -14,22 +13,21 @@ $(document).ready(function(){
   $('#contact').click(function(){
       scroll_to(".contact")
     });
+
+  // Arrow scroll to top
   $('.arrow').click(function(){
     $('html, body').animate({scrollTop: '0px'}, 500);
   })
 
+  // Hamburger nav btns
   $(".hamburger").click(function(){
     $(".navLinks").addClass("width");
   });
-
   $(".closeBtn").click(function(){
     $(".navLinks").removeClass("width");
   });
 
-  $(".hvr-underline-from-left:before").mouseleave(function(){
-    $(".hvr-underline-from-left:before").css("opacity", "0");
-  })
-
+  // Nav bar polaroids
   $("#about").mouseenter(function(){
     if(topPic != "about"){
       $("#rolloverAbout").removeClass("rolloverShow");
@@ -41,7 +39,6 @@ $(document).ready(function(){
       }, 10)
     }
   });
-
   $("#portfolio").mouseenter(function(){
     if(topPic != "portfolio"){
       $("#rolloverPortfolio").removeClass("rolloverShow");
@@ -53,7 +50,6 @@ $(document).ready(function(){
       }, 10)
     }
   });
-
   $("#contact").mouseenter(function(){
     if(topPic != "contact"){
       $("#rolloverContact").removeClass("rolloverShow");
@@ -66,6 +62,7 @@ $(document).ready(function(){
     }
   });
 
+  // About auto underline
   $(window).scroll(function(){
     $('.aboutWrapper').each(function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
@@ -77,7 +74,6 @@ $(document).ready(function(){
           }, 800);
         }
     });
-
     $('.tools').each(function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
