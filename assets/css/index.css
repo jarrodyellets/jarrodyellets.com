@@ -75,27 +75,97 @@ body {
   color: var(--red);
 }
 
+.me {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+
 .stack {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 50%;
+  width: 60%;
 }
 
 .tools {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 100px;
 }
 
-.toolsLeft {
-  margin-right: 100px;
+.toolHeader {
+  position: relative;
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.front, .back, .etc {
+  position: relative;
+}
+
+.front:before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  left: 0;
+  right: 100%;
+  bottom: 17%;
+  opacity: 1;
+  background: var(--blue);
+  height: 3px;
+  border-radius: 35%;
+  transform: rotate(1deg);
+  transform-origin: top left;
+  transition: right .5s;
+  -webkit-transition: right .5s;
+}
+.back:before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  left: 0;
+  right: 100%;
+  bottom: 17%;
+  opacity: 1;
+  background: var(--blue);
+  height: 3px;
+  border-radius: 35%;
+  transform: rotate(0.4deg);
+  transform-origin: top left;
+  transition: right .5s;
+  -webkit-transition: right .5s;
+}
+.etc:before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  left: 0;
+  right: 100%;
+  bottom: 17%;
+  opacity: 1;
+  background: var(--blue);
+  height: 3px;
+  border-radius: 35%;
+  transform: rotate(-.8deg);
+  transform-origin: top left;
+  transition: right .5s;
+  -webkit-transition: right .5s;
 }
 
 .stackText {
-  font-size: 2em;
+  font-size: 1.2em;
   color: var(--blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.6;
 }
 
 .stack-hash {
@@ -161,17 +231,12 @@ body {
   -webkit-transition: right .5s;
 }
 
-.underlineWho.right:before, .underlineWhat.right:before {
+.underlineWho.right:before, .underlineWhat.right:before, .front.right:before, .back.right:before {
   right: 5px;
 }
 
-.me {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 50%;
-  margin-right: 50px;
+.etc.right:before {
+  right: 45%;
 }
 
 .text {
@@ -631,6 +696,10 @@ p {
     margin-right: 0;
   }
 
+  .tools {
+    padding: 0;
+  }
+
   .divider {
     font-size: 1.8em;
   }
@@ -642,7 +711,7 @@ p {
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
   body{
     font-size: 20px;
   }
@@ -738,6 +807,27 @@ p {
     font-size: 1.4em;
   }
 
+  .me, .stack {
+    width: 90%;
+    margin-right: 0;
+  }
+
+  .stack-hash:before {
+    left: -8px;
+  }
+
+  .stack-hash.width:before {
+    width: 6px;
+  }
+
+  .toolHeader {
+    font-size: 1em;
+  }
+
+  .stackText {
+    font-size: .8em;
+  }
+
   .text {
     font-size: 1em;
     font-weight: 700;
@@ -785,14 +875,6 @@ p {
     text-align: center;
   }
 
-  .hvr-underline-from-left:before {
-    height: 2px;
-  }
-
-  .hvr-underline-from-left:after {
-    height: 2px;
-  }
-
   .social-hover:before {
     width: 3px;
   }
@@ -806,15 +888,7 @@ p {
     bottom: 16px;
   }
 
-  .mail-underline:after {
-    height: 2px;
-  }
-
-  .stack-hash:before {
-    height: 2px;
-  }
-
-  .underlineWho:before, .underlineWhat:before {
+  .underlineWho:before, .underlineWhat:before, .hvr-underline-from-left:before, .hvr-underline-from-left:after, .mail-underline:after, .mail-underline:after, .stack-hash:before, .front:before, .back:before, .etc:before {
     height: 2px;
   }
 
