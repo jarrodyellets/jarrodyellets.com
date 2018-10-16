@@ -91,15 +91,24 @@ $(document).ready(function () {
       }
     });
 
-    $('.portfolio').each(function(i) {
+    $('.portfolio').each(function (i) {
       var bottom_of_object = Math.floor($(this).offset().top);
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
-        setTimeout(function() {
-          for (let j = 1; j < 4; j++){
-            addOpacity(j);
-          }
-        }, 500);
+        for (let j = 1; j < 4; j++) {
+          addOpacity("#pol", j);
+        }
+      }
+    })
+    $('#pola1').each(function (i) {
+      var bottom_of_object = Math.floor($(this).offset().top) - 400;
+      var bottom_of_window = $(window).scrollTop();
+      console.log(bottom_of_object);
+      console.log(bottom_of_window);
+      if (bottom_of_window >= bottom_of_object) {
+        for (let j = 1; j < 4; j++) {
+          addOpacity("#pola", j);
+        }
       }
     })
   });
@@ -110,10 +119,10 @@ $(document).ready(function () {
     }, 300 * j);
   }
 
-  function addOpacity(j) {
-    setTimeout(function(){
-      $("#pol" + j).css("opacity", 1);
-    }, 1000 * j);
+  function addOpacity(id, j) {
+    setTimeout(function () {
+      $(id + j).css("opacity", 1);
+    }, 500 * j);
   }
 
   function scroll_to(div) {
