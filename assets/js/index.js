@@ -90,6 +90,18 @@ $(document).ready(function () {
         }, 3300);
       }
     });
+
+    $('.portfolio').each(function(i) {
+      var bottom_of_object = Math.floor($(this).offset().top);
+      var bottom_of_window = $(window).scrollTop();
+      if (bottom_of_window >= bottom_of_object) {
+        setTimeout(function() {
+          for (let j = 1; j < 4; j++){
+            addOpacity(j);
+          }
+        }, 500);
+      }
+    })
   });
 
   function addHash(j) {
@@ -98,10 +110,18 @@ $(document).ready(function () {
     }, 300 * j);
   }
 
+  function addOpacity(j) {
+    setTimeout(function(){
+      $("#pol" + j).css("opacity", 1);
+    }, 1000 * j);
+  }
+
   function scroll_to(div) {
     $('html, body').animate({
       scrollTop: $(div).offset().top
     }, 500);
   }
+
+
 
 });
