@@ -876,8 +876,9 @@ p {
     left: -8px;
   }
 
-  .stack-hash.width:before {
-    width: 6px;
+  .stack-hash.width:before, .stack-hash.widthx:after {
+    width: 10px;
+    height: 2px;
   }
 
   .toolHeader {
