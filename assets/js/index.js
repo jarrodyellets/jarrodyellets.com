@@ -76,18 +76,18 @@ $(document).ready(function () {
         }, 800);
         setTimeout(function () {
           $('.front').addClass('right');
-        }, 1500);
+        }, 1300);
         setTimeout(function () {
           $('.back').addClass('right');
-        }, 2200);
+        }, 1800);
         setTimeout(function () {
           $('.etc').addClass('right');
-        }, 2900);
+        }, 2300);
         setTimeout(function () {
           for (let j = 1; j < 16; j++) {
             addHash(j);
           }
-        }, 3300);
+        }, 2500);
       }
     });
 
@@ -100,11 +100,30 @@ $(document).ready(function () {
         }
       }
     })
+
+    $('#built1').each(function (i) {
+      var bottom_of_object = Math.floor($(this).offset().top) - 400;
+      var bottom_of_window = $(window).scrollTop();
+      if (bottom_of_window >= bottom_of_object) {
+        for (let j = 1; j < 4; j++) {
+          addRight("#built", j);
+        }
+      }
+    })
+
+    $('#builtx1').each(function (i) {
+      var bottom_of_object = Math.floor($(this).offset().top) - 400;
+      var bottom_of_window = $(window).scrollTop();
+      if (bottom_of_window >= bottom_of_object) {
+        for (let j = 1; j < 4; j++) {
+          addRight("#builtx", j);
+        }
+      }
+    })
+
     $('#pola1').each(function (i) {
       var bottom_of_object = Math.floor($(this).offset().top) - 400;
       var bottom_of_window = $(window).scrollTop();
-      console.log(bottom_of_object);
-      console.log(bottom_of_window);
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {
           addOpacity("#pola", j);
@@ -127,6 +146,12 @@ $(document).ready(function () {
     setTimeout(function () {
       $(id + j).css("opacity", 1);
     }, 500 * j);
+  }
+
+  function addRight(id, j) {
+    setTimeout(function(){
+      $(id + j).addClass('right')
+    }, 800 * j);
   }
 
   function scroll_to(div) {
