@@ -114,9 +114,13 @@ $(document).ready(function () {
   });
 
   function addHash(j) {
+    let delay = 450 * j;
     setTimeout(function () {
+      $("#stack" + j).addClass("widthx");
+    }, delay);
+    setTimeout(function(){
       $("#stack" + j).addClass("width");
-    }, 300 * j);
+    }, delay + 200);
   }
 
   function addOpacity(id, j) {

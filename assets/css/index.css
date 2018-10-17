@@ -2,7 +2,7 @@
   --black: rgba(22, 21, 19, .7);
   --red: rgba(248, 22, 33, .7);
   --blue: rgba(16, 97, 202, .7);
-  --green: rgba(1, 145, 94, 1);
+  --green: rgba(1, 145, 94, .8);
   --purple: rgba(130, 4, 104, .7);
 }
 
@@ -63,6 +63,10 @@ body {
   display: block;
 }
 
+.about {
+  margin-top: 80px;
+}
+
 .aboutWrapper {
   display: flex;
   justify-content: space-around;
@@ -102,7 +106,7 @@ body {
 .toolHeader {
   position: relative;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--green);
   font-size: 1.2em;
   text-transform: uppercase;
 }
@@ -119,13 +123,13 @@ body {
   right: 100%;
   bottom: 17%;
   opacity: 1;
-  background: var(--blue);
+  background: var(--green);
   height: 3px;
   border-radius: 35%;
   transform: rotate(1deg);
   transform-origin: top left;
-  transition: right .5s;
-  -webkit-transition: right .5s;
+  transition: right .2s;
+  -webkit-transition: right .2s;
 }
 .back:before {
   position: absolute;
@@ -135,13 +139,13 @@ body {
   right: 100%;
   bottom: 17%;
   opacity: 1;
-  background: var(--blue);
+  background: var(--green);
   height: 3px;
   border-radius: 35%;
   transform: rotate(0.4deg);
   transform-origin: top left;
-  transition: right .5s;
-  -webkit-transition: right .5s;
+  transition: right .2s;
+  -webkit-transition: right .2s;
 }
 .etc:before {
   position: absolute;
@@ -151,18 +155,18 @@ body {
   right: 100%;
   bottom: 17%;
   opacity: 1;
-  background: var(--blue);
+  background: var(--green);
   height: 3px;
   border-radius: 35%;
   transform: rotate(-.8deg);
   transform-origin: top left;
-  transition: right .5s;
-  -webkit-transition: right .5s;
+  transition: right .1s;
+  -webkit-transition: right .1s;
 }
 
 .stackText {
   font-size: 1.2em;
-  color: var(--blue);
+  color: var(--green);
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.6;
@@ -179,8 +183,25 @@ body {
   left: -15px;
   top: 49%;
   opacity: 1;
-  background: var(--blue);
-  transform: rotate(-20deg);
+  background: var(--green);
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  height: 3px;
+  width: 0;
+  border-radius: 40%;
+  -webkit-transition: width .1s;
+  transition: width .1s;
+}
+
+.stack-hash:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: -15px;
+  top: 35%;
+  opacity: 1;
+  background: var(--green);
+  transform: rotate(45deg);
   transform-origin: top left;
   height: 3px;
   width: 0;
@@ -191,6 +212,10 @@ body {
 
 .stack-hash.width:before {
   width: 12px;
+}
+
+.stack-hash.widthx:after {
+  width: 13px;
 }
 
 .underlineWho, .underlineWhat {
@@ -210,7 +235,7 @@ body {
   border-radius: 35%;
   transform: rotate(1deg);
   transform-origin: top left;
-  transition: right .5s;
+  transition: right .4s;
   -webkit-transition: right .5s;
 }
 
@@ -227,7 +252,7 @@ body {
   border-radius: 35%;
   transform: rotate(-1deg);
   transform-origin: top left;
-  transition: right .5s;
+  transition: right .4s;
   -webkit-transition: right .5s;
 }
 
@@ -253,7 +278,7 @@ p {
 .divider {
   font-size: 2.5em;
   text-align: center;
-  color: var(--green);
+  color: var(--purple);
   margin: 80px 0;
 }
 
@@ -299,14 +324,15 @@ p {
 }
 
 .built {
-  color: var(--blue);
+  color: var(--red);
   margin-top: 20px;
   font-size: 1.1em;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .builtWith {
-  color: var(--red);
+  color: var(--green);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -325,15 +351,15 @@ p {
   text-transform: uppercase;
   padding: 5px 10px;
   margin: 0 5px;
-  color: var(--purple);
+  color: var(--blue);
 }
 
 .btn:hover {
-  color: var(--purple);
+  color: var(--blue);
 }
 
 .btn:focus, .btn:active {
-  color: var(--purple);
+  color: var(--blue);
   outline: none !important;
   box-shadow: none !important;
 }
@@ -501,7 +527,7 @@ p {
   right: 100%;
   bottom: 10px;
   opacity: 0;
-  background: var(--purple);
+  background: var(--blue);
   /* transform: rotate(1.01deg); */
   transform-origin: top left;
   height: 3px;
@@ -518,7 +544,7 @@ p {
   right: 100%;
   bottom: 0;
   opacity: 0;
-  background: var(--purple);
+  background: var(--blue);
   transform: rotate(.51deg);
   transform-origin: top left;
   height: 3px;
