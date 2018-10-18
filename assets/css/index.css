@@ -342,12 +342,12 @@ p {
   bottom: 18%;
   opacity: 1;
   background: var(--red);
-  height: 2px;
+  height: 3px;
   border-radius: 35%;
-  transform: rotate(1.2deg);
+  transform: rotate(.2deg);
   transform-origin: top left;
   transition: right .1s;
-  -webkit-transition: right .1s;
+  -webkit-transition: right .2s;
 }
 
 .builtWith {
@@ -399,7 +399,7 @@ p {
 }
 
 .contactIcons {
-  margin-bottom: 50px;
+  margin: 20px 0 50px 0;
 }
 
 .contactImage {
@@ -949,7 +949,7 @@ p {
     bottom: 16px;
   }
 
-  .underlineWho:before, .underlineWhat:before, .hvr-underline-from-left:before, .hvr-underline-from-left:after, .mail-underline:after, .mail-underline:after, .stack-hash:before, .front:before, .back:before, .etc:before {
+  .underlineWho:before, .underlineWhat:before, .hvr-underline-from-left:before, .hvr-underline-from-left:after, .mail-underline:after, .mail-underline:after, .stack-hash:before, .front:before, .back:before, .etc:before, .built:before {
     height: 2px;
   }
 
