@@ -15,7 +15,7 @@ $(document).ready(function () {
   });
 
   // Arrow scroll to top
-  $('.arrow').click(function () {
+  $('.arrowWrapper').click(function () {
     $('html, body').animate({
       scrollTop: '0px'
     }, 500);
@@ -62,6 +62,10 @@ $(document).ready(function () {
         $("#rolloverContact").addClass("rolloverShow");
       }, 10)
     }
+  });
+
+  $(".arrowWrapper").mouseenter(function () {
+    $('.arrowFiller').css("height", "100%");
   });
 
   // About auto underline

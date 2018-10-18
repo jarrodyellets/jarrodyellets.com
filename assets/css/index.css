@@ -417,13 +417,40 @@ p {
   color: var(--blue);
 }
 
-.arrow {
+.arrowWrapper {
   position: absolute;
   bottom: 0;
   right: 10px;
+  overflow: hidden;
+}
+
+.arrowFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
+
+.arrow {
   cursor: pointer;
   width: 100px;
   filter: opacity(70%);
+}
+
+.arrowFiller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('https://www.jarrodyellets.com/images/arrowFill.png');
+  background-size: cover;
+  width: 100%;
+  height: 0;
+  opacity: .7;
+  transition: height 2s linear;
+  cursor: pointer;
 }
 
 .menuContact {
@@ -547,12 +574,11 @@ p {
   bottom: 10px;
   opacity: 0;
   background: var(--blue);
-  /* transform: rotate(1.01deg); */
   transform-origin: top left;
   height: 3px;
   border-radius: 30%;
   transition: opacity .15s, right .25s;
-  -webkit-transition: opacity .15s, right .25s linear;
+  -webkit-transition: opacity .15s, right .25s;
 }
 
 .hvr-underline-from-left:after {
