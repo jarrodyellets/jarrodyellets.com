@@ -65,6 +65,7 @@ body {
 
 .about {
   margin-top: 80px;
+  padding-top: 50px;
 }
 
 .aboutWrapper {
@@ -286,6 +287,7 @@ p {
 .portfolio {
   max-width: 1200px;
   margin: 0 auto;
+  padding-top: 50px;
 }
 
 .portfolioGrid {
@@ -387,6 +389,7 @@ p {
   max-width: 1200px;
   margin: 0 auto 100px auto;
   position: relative;
+  padding-top: 50px;
 }
 
 .contactWrapper {
@@ -474,16 +477,27 @@ p {
 
 .nav-bar {
   position: relative;
-  z-index: 20;
+  z-index: 1000;
   height: 50px;
   font-size: 0.467em;
   max-height: 50px;
   width: 100%;
   padding: 0 5%;
+  margin: 0;
   background: rgba(0, 0, 0, .5);
   display: flex;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, .7);
+  animation: sticky 1s;
 }
 
 .linksWrapper {
@@ -719,6 +733,15 @@ p {
   opacity: 1;
   outline: none !important;
   transition-delay: .25s;
+}
+
+@keyframes sticky {
+  0% {
+    width: calc(100% - 40px);
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 @keyframes strike{

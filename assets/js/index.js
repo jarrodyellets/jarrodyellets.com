@@ -65,7 +65,6 @@ $(document).ready(function () {
     }
   });
 
-  console.log(width);
   if (width > 768){
     $(".arrowWrapper").mouseenter(function () {
       $('.arrowFiller').css("height", "100%");
@@ -74,6 +73,11 @@ $(document).ready(function () {
 
   // About auto underline
   $(window).scroll(function () {
+    if (window.pageYOffset > 20){
+      $('.nav-bar').addClass('sticky');
+    } else if (window.pageYOffset < 20){
+      $('.nav-bar').removeClass('sticky');
+    }
     $('.about').each(function (i) {
       var bottom_of_object = Math.floor($(this).offset().top);
       var bottom_of_window = $(window).scrollTop();
@@ -92,7 +96,7 @@ $(document).ready(function () {
           $('.etc').addClass('right');
         }, 2300);
         setTimeout(function () {
-          for (let j = 1; j < 16; j++) {
+          for (let j = 1; j < 17; j++) {
             addHash(j);
           }
         }, 2500);
@@ -110,7 +114,7 @@ $(document).ready(function () {
     })
 
     $('#built1').each(function (i) {
-      var bottom_of_object = Math.floor($(this).offset().top) - 400;
+      var bottom_of_object = Math.floor($(this).offset().top) - 500;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {
@@ -120,7 +124,7 @@ $(document).ready(function () {
     })
 
     $('#builtx1').each(function (i) {
-      var bottom_of_object = Math.floor($(this).offset().top) - 400;
+      var bottom_of_object = Math.floor($(this).offset().top) - 500;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {
