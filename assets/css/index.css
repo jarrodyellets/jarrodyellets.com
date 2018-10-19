@@ -500,6 +500,10 @@ p {
   animation: bounce .5s ease-in-out;
 }
 
+.navFade {
+  animation: fadeIn .3s ease-in-out;
+}
+
 .linksWrapper {
   display: flex;
   justify-content: space-between;
@@ -753,6 +757,15 @@ p {
   }
   95% {
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

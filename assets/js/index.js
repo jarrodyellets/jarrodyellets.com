@@ -75,8 +75,10 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if (window.pageYOffset > 90){
       $('.nav-bar').addClass('sticky');
+      $('.nav-bar').removeClass('navFade');
     } else if (window.pageYOffset < 70){
       $('.nav-bar').removeClass('sticky');
+      $('.nav-bar').addClass('navFade');
     }
     $('.about').each(function (i) {
       var bottom_of_object = Math.floor($(this).offset().top);
