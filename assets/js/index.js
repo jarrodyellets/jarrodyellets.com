@@ -73,9 +73,9 @@ $(document).ready(function () {
 
   // About auto underline
   $(window).scroll(function () {
-    if (window.pageYOffset > 20){
+    if (window.pageYOffset > 90){
       $('.nav-bar').addClass('sticky');
-    } else if (window.pageYOffset < 20){
+    } else if (window.pageYOffset < 70){
       $('.nav-bar').removeClass('sticky');
     }
     $('.about').each(function (i) {
