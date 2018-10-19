@@ -2,6 +2,7 @@ $(document).ready(function () {
 
   var zIndex = 1;
   var topPic = "";
+  var width = $(window).width();
 
   // Nav Bar auto scroll to section
   $('#about').click(function () {
@@ -64,9 +65,12 @@ $(document).ready(function () {
     }
   });
 
-  $(".arrowWrapper").mouseenter(function () {
-    $('.arrowFiller').css("height", "100%");
-  });
+  console.log(width);
+  if (width > 768){
+    $(".arrowWrapper").mouseenter(function () {
+      $('.arrowFiller').css("height", "100%");
+    });
+  }
 
   // About auto underline
   $(window).scroll(function () {
