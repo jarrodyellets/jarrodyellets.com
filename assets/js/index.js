@@ -82,8 +82,10 @@ $(document).ready(function () {
       $('.nav-bar').removeClass('navFade');
     } else if (window.pageYOffset < 70){
       $('.nav-bar').removeClass('sticky');
-      $('#home').css("display", "none");
       $('.nav-bar').addClass('navFade');
+      if (width >= 768){
+        $('#home').css("display", "none");
+      }
     }
     $('.about').each(function (i) {
       var bottom_of_object = Math.floor($(this).offset().top);
