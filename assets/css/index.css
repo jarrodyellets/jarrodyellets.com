@@ -884,7 +884,7 @@ p {
     height: 100%;
     width: 170px;
     position: fixed;
-    z-index: 5;
+    z-index: 10;
     top: 50px;
     right: -170px;
     display: flex;
@@ -945,8 +945,12 @@ p {
   .mobileToggle {
     transition: all .5s;
   }
+
+  .nav-bar .linksWrapper a:focus {
+    color: #DEDEDE;
+  }
   
-  .mobileToggle:hover {
+  .mobileToggle:hover, .mobileToggle:focus {
     color: #DEDEDE;
   }
 
