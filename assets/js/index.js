@@ -3,6 +3,7 @@ $(document).ready(function () {
   var zIndex = 1;
   var topPic = "";
   var width = $(window).width();
+  var mobileMenu = false;
 
   // Nav Bar auto scroll to section
   $('#home').click(function () {
@@ -27,10 +28,24 @@ $(document).ready(function () {
 
   // Hamburger nav btns
   $(".hamburger").click(function () {
-    $(".navLinks").addClass("width");
-  });
-  $(".closeBtn").click(function () {
-    $(".navLinks").removeClass("width");
+    mobileMenu = !mobileMenu;
+    if(mobileMenu){
+      $(".navLinks").addClass("width");
+      $(".mobileToggle").css("transform", "translateX(50px");
+      setTimeout(function() {
+        $(".mobileToggle").removeClass("fas fa-bars")
+        $(".mobileToggle").addClass("fas fa-times")
+        $(".mobileToggle").css("transform", "translateX(0");
+      }, 300)
+    } else {
+      $(".navLinks").removeClass("width");
+      $(".mobileToggle").css("transform", "translateX(50px");
+      setTimeout(function() {
+        $(".mobileToggle").removeClass("fas fa-times")
+        $(".mobileToggle").addClass("fas fa-bars")
+        $(".mobileToggle").css("transform", "translateX(0");
+      }, 300)
+    }
   });
 
   // Nav bar polaroids
