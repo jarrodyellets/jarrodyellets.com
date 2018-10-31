@@ -949,6 +949,11 @@ p {
   .nav-bar .linksWrapper a:focus {
     color: #DEDEDE;
   }
+
+  a:focus, a:hover {
+    color: #DEDEDE;
+    text-decoration: none;
+  }
   
   .mobileToggle:hover, .mobileToggle:focus {
     color: #DEDEDE;
