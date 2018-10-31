@@ -5,6 +5,9 @@ $(document).ready(function () {
   var width = $(window).width();
 
   // Nav Bar auto scroll to section
+  $('#home').click(function () {
+    scroll_to("html");
+  });
   $('#about').click(function () {
     scroll_to(".about");
   });
@@ -75,9 +78,11 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if (window.pageYOffset > 90){
       $('.nav-bar').addClass('sticky');
+      $('#home').css("display", "block");
       $('.nav-bar').removeClass('navFade');
     } else if (window.pageYOffset < 70){
       $('.nav-bar').removeClass('sticky');
+      $('#home').css("display", "none");
       $('.nav-bar').addClass('navFade');
     }
     $('.about').each(function (i) {

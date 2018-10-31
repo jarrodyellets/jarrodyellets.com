@@ -545,12 +545,18 @@ p {
   text-decoration: none;
 }
 
+#home:hover {
+  transform: rotate(-4deg);
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
+}
+
 #about:hover {
   transform: rotate(5deg);
   -webkit-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
   box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.75);
-
 }
 
 #portfolio:hover {
@@ -575,7 +581,7 @@ p {
   font-size: 20px;
 }
 
-.closeBtn {
+.closeBtn, #home {
   display: none;
 }
 
@@ -895,8 +901,9 @@ p {
     right: 0;
   }
 
-  #about:hover, #portfolio:hover, #contact:hover {
+  #about:hover, #portfolio:hover, #contact:hover, #home:hover {
     box-shadow: none;
+    transform: none;
   }
 
   .links {
@@ -907,18 +914,6 @@ p {
   .links:hover {
     color: #DEDEDE;
     background: rgba(0, 0, 0, 0);
-  }
-
-  #about:hover {
-    transform: none;
-  }
-  
-  #portfolio:hover {
-    transform: none;
-  }
-  
-  #contact:hover {
-    transform: none;
   }
 
   #mail-icon {
@@ -953,6 +948,10 @@ p {
     right: 25px;
     color: #DEDEDE;
     font-size: 1.4em;
+  }
+
+  #home {
+    display: block;
   }
 
   .me, .stack {
