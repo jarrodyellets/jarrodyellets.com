@@ -120,7 +120,7 @@ $(document).ready(function () {
           $('.etc').addClass('right');
         }, 2300);
         setTimeout(function () {
-          for (let j = 1; j < 17; j++) {
+          for (let j = 1; j < 18; j++) {
             addHash(j);
           }
         }, 2500);
