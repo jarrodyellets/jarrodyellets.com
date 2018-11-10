@@ -1001,11 +1001,6 @@ p {
     font-size: 1em;
   }
 
-  .stackText {
-    font-size: 1em;
-    text-transform: uppercase;
-  }
-
   .text {
     font-size: 1em;
     font-weight: 700;
@@ -1081,9 +1076,10 @@ p {
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 665px){
   .stackText {
     font-size: .8em;
+    text-transform: uppercase;
   }
 }
 
