@@ -985,7 +985,11 @@ p {
   }
 
   .stack-hash:before {
-    left: -8px;
+    left: -3px;
+  }
+
+  .stack-hash:after {
+    left: -11px;
   }
 
   .stack-hash.width:before, .stack-hash.widthx:after {
@@ -998,7 +1002,8 @@ p {
   }
 
   .stackText {
-    font-size: .9em;
+    font-size: 1em;
+    text-transform: uppercase;
   }
 
   .text {
@@ -1073,6 +1078,12 @@ p {
 
   .divider {
     font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .stackText {
+    font-size: .8em;
   }
 }
 
