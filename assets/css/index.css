@@ -95,10 +95,9 @@ body {
 }
 
 .tools {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+  display: flex;
   justify-content: space-between;
-  grid-column-gap: 20px;
+  align-items: flex-start;
   width: 100%;
   padding-left: 100px;
 }
@@ -1001,13 +1000,12 @@ p {
   }
 
   .tools {
-    grid-template-columns: repeat(2, auto);
-    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .toolEtc {
-    grid-column:  1 / -1;
     margin: 0 auto;
+    padding: 0 30%;
   }
 
   .text {
@@ -1086,9 +1084,9 @@ p {
 }
 
 @media screen and (max-width: 320px){
-  .stackText {
+  /* .stackText {
     font-size: .9em;
-  }
+  } */
 }
 
 }
