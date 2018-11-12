@@ -97,9 +97,10 @@ body {
 }
 
 .tools {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   justify-content: space-between;
-  align-items: flex-start;
+  grid-column-gap: 20px;
   width: 100%;
   padding-left: 100px;
 }
@@ -212,7 +213,7 @@ body {
 }
 
 .stack-hash.width:before {
-  width: 12px;
+  width: 16px;
 }
 
 .stack-hash.widthx:after {
@@ -997,12 +998,19 @@ p {
     height: 2px;
   }
 
-  .stackText {
+  /* .stackText {
     font-size: 1.2em;
+  } */
+
+
+  .tools {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-around;
   }
 
-  .toolHeader {
-    font-size: 1em;
+  .toolEtc {
+    grid-column:  1 / -1;
+    margin: 0 auto;
   }
 
   .text {
