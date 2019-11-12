@@ -4,6 +4,8 @@
   --blue: rgba(16, 97, 202, 0.7);
   --green: rgba(1, 145, 94, 0.7);
   --purple: rgba(130, 4, 104, 0.7);
+  --orange: rgba(255, 127, 0, 0.7);
+
 }
 
 html {
@@ -23,10 +25,6 @@ body {
 
 .main-window {
   position: relative;
-  background-image: url('https://www.jarrodyellets.com/images/sidewalkBack.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left center;
   height: 95vh;
   margin: 20px;
   display: block;
@@ -53,11 +51,101 @@ body {
   animation: rollover 700ms;
 }
 
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 15vh;
+}
+
+.heroAbout {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.4em;
+  margin-left: 50px;
+  opacity: .8;
+}
+
+.heroSpan {
+  color: var(--red);
+}
+
+.downArrowWrapper {
+  padding: 0 50px;
+  margin: 100px auto 0 auto;
+  cursor: pointer;
+  width: 100px;
+}
+
+.downArrow {
+  position: relative;
+  width: 5px;
+  height: 0;
+  border-radius: 30%;
+  background: var(--purple);
+  transform-origin: bottom;
+  -webkit-transition: height 0.2s;
+  transition: height 0.2s;
+}
+
+.downArrow:before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  right: -1px;
+  border-radius: 30%;
+  transform: rotate(-30deg);
+  transform-origin: bottom right;
+  background: var(--purple);
+  -webkit-transition: height 0.1s;
+  transition: height 0.1s;
+}
+
+.downArrow:after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 30%;
+  transform: rotate(26deg);
+  transform-origin: bottom left;
+  background: var(--purple);
+  -webkit-transition: height 0.1s;
+  transition: height 0.1s;
+}
+
+.arrowHeight3 {
+  height: 90px !important;
+}
+
+.downArrow.arrowHeight1:before {
+  height: 42px;
+}
+
+.downArrow.arrowHeight2:after {
+  height: 38px;
+}
+
+.profileImg {
+  max-width: 420px;
+}
+
 .about {
   max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 80px;
+  margin: 80px auto 0 auto;
   padding-top: 50px;
+}
+
+.aboutHeader {
+  color: var(--blue);
+  font-size: 3em;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .titleImg {
@@ -81,6 +169,7 @@ body {
 .subHeader {
   font-size: 2.4em;
   color: var(--red);
+  opacity: .8;
 }
 
 .me {
@@ -316,6 +405,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.6;
+  opacity: .8;
 }
 
 p {
@@ -379,6 +469,18 @@ p {
   z-index: 5;
   -webkit-transition: all 3000ms ease-in-out;
   transition: all 3000ms ease-in-out;
+}
+
+.prImg {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  -webkit-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 
 .built {
@@ -552,25 +654,12 @@ p {
   width: 100%;
   padding: 0 5%;
   margin: 0;
-  background: rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.7);
-  -webkit-animation: bounce 0.5s ease-in-out;
-  animation: bounce 0.5s ease-in-out;
 }
 
 .navFade {
@@ -595,6 +684,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
   font-size: 1.4em;
 }
 
@@ -611,8 +701,8 @@ p {
 
 .links {
   text-decoration: none;
-  color: #dedede;
-  font-size: 1.1em;
+  color: var(--blue);
+  font-size: 2.1em;
   font-weight: 600;
   text-transform: uppercase;
   margin: 0 1.5vw;
@@ -628,6 +718,32 @@ p {
   color: rgba(0, 0, 0, 0, 5);
   background: #dedede;
   text-decoration: none;
+}
+
+.menuImage {
+  width: 40px;
+}
+
+.sticky {
+  position: fixed;
+  color: #dedede;
+  font-size: 7.54px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-animation: bounce 0.5s ease-in-out;
+  animation: bounce 0.5s ease-in-out;
+}
+
+.sticky .links {
+  color: #dedede;
+}
+
+.sticky .navIcons {
+  font-size: 19px;
 }
 
 .navIcons a:focus {

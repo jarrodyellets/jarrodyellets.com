@@ -1,125 +1,127 @@
-$(document).ready(function () {
+$(document).ready(function() {
+
+  addOpacity("#pol", 2)
+
+  addArrow();
 
   var zIndex = 1;
-  var topPic = "";
+  var topPic = 'polProfile2';
   var width = $(window).width();
   var mobileMenu = false;
 
   // Nav Bar auto scroll to section
-  $('#home').click(function () {
-    scroll_to("html");
+  $('#home').click(function() {
+    scroll_to('html');
   });
-  $('#about').click(function () {
-    scroll_to(".about");
+  $('#about').click(function() {
+    scroll_to('.about');
   });
-  $('#portfolio').click(function () {
-    scroll_to(".portfolio");
+  $('#portfolio').click(function() {
+    scroll_to('.portfolio');
   });
-  $('#contact').click(function () {
-    scroll_to(".contact")
+  $('#contact').click(function() {
+    scroll_to('.contact');
   });
 
   // Arrow scroll to top
-  $('.arrowWrapper').click(function () {
-    $('html, body').animate({
-      scrollTop: '0px'
-    }, 500);
-  })
+  $('.arrowWrapper').click(function() {
+    $('html, body').animate(
+      {
+        scrollTop: '0px'
+      },
+      500
+    );
+  });
 
   // Hamburger nav btns
-  $(".hamburger").click(function () {
+  $('.hamburger').click(function() {
     mobileMenu = !mobileMenu;
-    if(mobileMenu){
-      $(".navLinks").addClass("width");
-      $(".mobileToggle").css("transform", "translateX(50px");
+    if (mobileMenu) {
+      $('.navLinks').addClass('width');
+      $('.mobileToggle').css('transform', 'translateX(50px');
       setTimeout(function() {
-        $(".mobileToggle").removeClass("fas fa-bars")
-        $(".mobileToggle").addClass("fas fa-times")
-        $(".mobileToggle").css("transform", "translateX(0");
-      }, 300)
+        $('.mobileToggle').removeClass('fas fa-bars');
+        $('.mobileToggle').addClass('fas fa-times');
+        $('.mobileToggle').css('transform', 'translateX(0');
+      }, 300);
     } else {
-      $(".navLinks").removeClass("width");
-      $(".mobileToggle").css("transform", "translateX(50px");
+      $('.navLinks').removeClass('width');
+      $('.mobileToggle').css('transform', 'translateX(50px');
       setTimeout(function() {
-        $(".mobileToggle").removeClass("fas fa-times")
-        $(".mobileToggle").addClass("fas fa-bars")
-        $(".mobileToggle").css("transform", "translateX(0");
-      }, 300)
+        $('.mobileToggle').removeClass('fas fa-times');
+        $('.mobileToggle').addClass('fas fa-bars');
+        $('.mobileToggle').css('transform', 'translateX(0');
+      }, 300);
     }
   });
 
   // Nav bar polaroids
-  $("#about").mouseenter(function () {
-    if (topPic != "about") {
-      $("#rolloverAbout").removeClass("rolloverShow");
-      $("#rolloverAbout").css('z-index', zIndex);
-      zIndex++
-      setTimeout(function () {
-        topPic = "about";
-        $("#rolloverAbout").addClass("rolloverShow");
-      }, 10)
-    }
-  });
-  $("#portfolio").mouseenter(function () {
-    if (topPic != "portfolio") {
-      $("#rolloverPortfolio").removeClass("rolloverShow");
-      $("#rolloverPortfolio").css('z-index', zIndex);
-      zIndex++
-      setTimeout(function () {
-        topPic = "portfolio";
-        $("#rolloverPortfolio").addClass("rolloverShow");
-      }, 10)
-    }
-  });
-  $("#contact").mouseenter(function () {
-    if (topPic != "contact") {
-      $("#rolloverContact").removeClass("rolloverShow");
-      $("#rolloverContact").css('z-index', zIndex);
-      zIndex++
-      setTimeout(function () {
-        topPic = "contact";
-        $("#rolloverContact").addClass("rolloverShow");
-      }, 10)
-    }
-  });
+  // $('#about').mouseenter(function() {
+  //   if (topPic != 'polAbout1') {
+  //     $('#' + topPic).css('opacity', 0);
+  //     setTimeout(function() {
+  //       topPic = 'polAbout1';
+  //       addOpacity('#polAbout', 1);
+  //     }, 500);
+  //   }
+  // });
+  // $('#portfolio').mouseenter(function() {
+  //   if (topPic != 'polPortfolio1') {
+  //     $('#' + topPic).css('opacity', 0);
+  //     setTimeout(function() {
+  //       topPic = 'polPortfolio1';
+  //       addOpacity('#polPortfolio', 1);
+  //     }, 500);
+  //   }
+  // });
+  // $('#contact').mouseenter(function() {
+  //   if (topPic != 'polContact1') {
+  //     console.log(topPic);
+  //     $('#' + topPic).css('opacity', 0);
+  //     setTimeout(function() {
+  //       topPic = 'polContact1';
+  //       addOpacity('#polContact', 1);
+  //     }, 500);
+  //   }
+  // });
 
-  if (width > 768){
-    $(".arrowWrapper").mouseenter(function () {
-      $('.arrowFiller').css("height", "100%");
+  if (width > 768) {
+    $('.arrowWrapper').mouseenter(function() {
+      $('.arrowFiller').css('height', '100%');
     });
   }
 
   // About auto underline
-  $(window).scroll(function () {
-    if (window.pageYOffset > 90){
-      $('.nav-bar').addClass('sticky');
-      $('#home').css("display", "block");
-      $('.nav-bar').removeClass('navFade');
-    } else if (window.pageYOffset < 70){
-      $('.nav-bar').removeClass('sticky');
-      $('.nav-bar').addClass('navFade');
-      if (width >= 768){
-        $('#home').css("display", "none");
-      }
-    }
-    $('.about').each(function (i) {
+  $(window).scroll(function() {
+    // if (window.pageYOffset > 90) {
+    //   $('.nav-bar').addClass('sticky');
+    //   $('#home').css('display', 'block');
+    //   $('.nav-bar').removeClass('navFade');
+    // } else if (window.pageYOffset < 70) {
+    //   $('.nav-bar').removeClass('sticky');
+    //   $('.nav-bar').addClass('navFade');
+    //   if (width >= 768) {
+    //     $('#home').css('display', 'none');
+    //   }
+    // }
+    $('.about').each(function(i) {
       var bottom_of_object = Math.floor($(this).offset().top);
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         $('.underlineWho').addClass('right');
-        setTimeout(function () {
+        setTimeout(function() {
           $('.underlineWhat').addClass('right');
         }, 800);
-        setTimeout(function () {
+        setTimeout(function() {
           $('.front').addClass('right');
         }, 1300);
-        setTimeout(function () {
+        setTimeout(function() {
           $('.back').addClass('right');
         }, 1800);
-        setTimeout(function () {
+        setTimeout(function() {
           $('.etc').addClass('right');
         }, 2300);
-        setTimeout(function () {
+        setTimeout(function() {
           for (let j = 1; j < 20; j++) {
             addHash(j);
           }
@@ -127,75 +129,87 @@ $(document).ready(function () {
       }
     });
 
-    $('.portfolio').each(function (i) {
+    $('.portfolio').each(function(i) {
       var bottom_of_object = Math.floor($(this).offset().top);
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {
-          addOpacity("#pol", j);
+          addOpacity('#pol', j);
         }
       }
-    })
+    });
 
-    $('#built1').each(function (i) {
+    $('#built1').each(function(i) {
       var bottom_of_object = Math.floor($(this).offset().top) - 500;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {
-          addRight("#built", j);
+          addRight('#built', j);
         }
       }
-    })
+    });
 
-    $('#builtx1').each(function (i) {
+    $('#builtx1').each(function(i) {
       var bottom_of_object = Math.floor($(this).offset().top) - 500;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {
-          addRight("#builtx", j);
+          addRight('#builtx', j);
         }
       }
-    })
+    });
 
-    $('#pola1').each(function (i) {
+    $('#pola1').each(function(i) {
       var bottom_of_object = Math.floor($(this).offset().top) - 400;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {
-          addOpacity("#pola", j);
+          addOpacity('#pola', j);
         }
       }
-    })
+    });
   });
 
   function addHash(j) {
     let delay = 450 * j;
-    setTimeout(function () {
-      $("#stack" + j).addClass("widthx");
+    setTimeout(function() {
+      $('#stack' + j).addClass('widthx');
     }, delay);
-    setTimeout(function(){
-      $("#stack" + j).addClass("width");
+    setTimeout(function() {
+      $('#stack' + j).addClass('width');
     }, delay + 200);
   }
 
+  function addArrow() {
+    setTimeout(function() {
+      $('.downArrow').addClass('arrowHeight3');
+    }, 4100);
+    setTimeout(function() {
+      $('.downArrow').addClass('arrowHeight1');
+    }, 4300);
+    setTimeout(function() {
+      $('.downArrow').addClass('arrowHeight2');
+    }, 4600);
+  }
+
   function addOpacity(id, j) {
-    setTimeout(function () {
-      $(id + j).css("opacity", 1);
+    setTimeout(function() {
+      $(id + j).css('opacity', 1);
     }, 500 * j);
   }
 
   function addRight(id, j) {
-    setTimeout(function(){
-      $(id + j).addClass('right')
+    setTimeout(function() {
+      $(id + j).addClass('right');
     }, 800 * j);
   }
 
   function scroll_to(div) {
-    $('html, body').animate({
-      scrollTop: $(div).offset().top
-    }, 500);
+    $('html, body').animate(
+      {
+        scrollTop: $(div).offset().top
+      },
+      500
+    );
   }
-
-
-
 });
