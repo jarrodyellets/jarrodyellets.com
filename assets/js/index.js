@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  addOpacity("#pol", 2)
+  addOpacity("#pol", 4)
 
   addArrow();
 
@@ -63,17 +63,6 @@ $(document).ready(function() {
 
   // About auto underline
   $(window).scroll(function() {
-    // if (window.pageYOffset > 90) {
-    //   $('.nav-bar').addClass('sticky');
-    //   $('#home').css('display', 'block');
-    //   $('.nav-bar').removeClass('navFade');
-    // } else if (window.pageYOffset < 70) {
-    //   $('.nav-bar').removeClass('sticky');
-    //   $('.nav-bar').addClass('navFade');
-    //   if (width >= 768) {
-    //     $('#home').css('display', 'none');
-    //   }
-    // }
     $('.about').each(function(i) {
       var bottom_of_object = Math.floor($(this).offset().top);
       var bottom_of_window = $(window).scrollTop();
@@ -100,7 +89,7 @@ $(document).ready(function() {
     });
 
     $('.portfolio').each(function(i) {
-      var bottom_of_object = Math.floor($(this).offset().top);
+      var bottom_of_object = Math.floor($(this).offset().top) - 100;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {
@@ -110,7 +99,7 @@ $(document).ready(function() {
     });
 
     $('#built1').each(function(i) {
-      var bottom_of_object = Math.floor($(this).offset().top) - 500;
+      var bottom_of_object = Math.floor($(this).offset().top) - 600;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {
@@ -120,7 +109,7 @@ $(document).ready(function() {
     });
 
     $('#builtx1').each(function(i) {
-      var bottom_of_object = Math.floor($(this).offset().top) - 500;
+      var bottom_of_object = Math.floor($(this).offset().top) - 600;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {
@@ -130,7 +119,7 @@ $(document).ready(function() {
     });
 
     $('#pola1').each(function(i) {
-      var bottom_of_object = Math.floor($(this).offset().top) - 400;
+      var bottom_of_object = Math.floor($(this).offset().top) - 600;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {

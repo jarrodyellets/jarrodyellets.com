@@ -752,12 +752,12 @@ p {
 
 .menu:hover:before {
   width: 65px;
-  opacity: 1;
+  opacity: .7;
 }
 
 .menu:hover:after {
   width: 70px;
-  opacity: 1;
+  opacity: .7;
 }
 
 .navLinks {
@@ -769,7 +769,7 @@ p {
 .links {
   text-decoration: none;
   color: var(--blue);
-  font-size: 2.1em;
+  font-size: 2.5em;
   font-weight: 600;
   text-transform: uppercase;
   margin: 0 1.5vw;
