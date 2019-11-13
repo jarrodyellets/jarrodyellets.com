@@ -4,8 +4,8 @@ $(document).ready(function() {
 
   addArrow();
 
-  var zIndex = 1;
-  var topPic = 'polProfile2';
+  addNavLine();
+
   var width = $(window).width();
   var mobileMenu = false;
 
@@ -54,36 +54,6 @@ $(document).ready(function() {
       }, 300);
     }
   });
-
-  // Nav bar polaroids
-  // $('#about').mouseenter(function() {
-  //   if (topPic != 'polAbout1') {
-  //     $('#' + topPic).css('opacity', 0);
-  //     setTimeout(function() {
-  //       topPic = 'polAbout1';
-  //       addOpacity('#polAbout', 1);
-  //     }, 500);
-  //   }
-  // });
-  // $('#portfolio').mouseenter(function() {
-  //   if (topPic != 'polPortfolio1') {
-  //     $('#' + topPic).css('opacity', 0);
-  //     setTimeout(function() {
-  //       topPic = 'polPortfolio1';
-  //       addOpacity('#polPortfolio', 1);
-  //     }, 500);
-  //   }
-  // });
-  // $('#contact').mouseenter(function() {
-  //   if (topPic != 'polContact1') {
-  //     console.log(topPic);
-  //     $('#' + topPic).css('opacity', 0);
-  //     setTimeout(function() {
-  //       topPic = 'polContact1';
-  //       addOpacity('#polContact', 1);
-  //     }, 500);
-  //   }
-  // });
 
   if (width > 768) {
     $('.arrowWrapper').mouseenter(function() {
@@ -190,6 +160,12 @@ $(document).ready(function() {
     setTimeout(function() {
       $('.downArrow').addClass('arrowHeight2');
     }, 4600);
+  }
+
+  function addNavLine() {
+    setTimeout(function() {
+      $('.nav-bar').addClass('navLineWidth');
+    }, 3000);
   }
 
   function addOpacity(id, j) {

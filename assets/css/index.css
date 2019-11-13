@@ -26,7 +26,7 @@ body {
 .main-window {
   position: relative;
   height: 95vh;
-  margin: 20px;
+  margin: 20px 0;
   display: block;
   overflow: hidden;
   padding: 0;
@@ -75,6 +75,7 @@ body {
   margin: 100px auto 0 auto;
   cursor: pointer;
   width: 100px;
+  opacity: .8;
 }
 
 .downArrow {
@@ -570,6 +571,7 @@ p {
 
 .contactIcons {
   margin: 20px 0 50px 0;
+  opacity: .8;
 }
 
 .contactImage {
@@ -646,20 +648,37 @@ p {
 }
 
 .nav-bar {
-  position: relative;
+  position: fixed;
   z-index: 1000;
   height: 50px;
+  top: 0;
+  right: 0;
   font-size: 0.467em;
-  max-height: 50px;
+  max-height: 100px;
   width: 100%;
-  padding: 0 5%;
+  padding: 40px 5% 40px 5%;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
+  background-color: #e3e3e9;
+}
+
+.nav-bar:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  border-radius: 30%;
+  opacity: .8;
+  background: var(--black);
+  -webkit-transition: width 1.2s;
+  transition: width 1.2s; 
+}
+
+.nav-bar.navLineWidth:before {
+  width: 100vw
 }
 
 .navFade {
@@ -678,6 +697,7 @@ p {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
+  opacity: .8;
 }
 
 .navIcons {
@@ -715,8 +735,7 @@ p {
 }
 
 .links:hover {
-  color: rgba(0, 0, 0, 0, 5);
-  background: #dedede;
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -755,7 +774,7 @@ p {
   outline: none;
 }
 
-#home:hover {
+/* #home:hover {
   -webkit-transform: rotate(-4deg);
   transform: rotate(-4deg);
   -webkit-box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
@@ -781,7 +800,7 @@ p {
   transform: rotate(2deg);
   -webkit-box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
-}
+} */
 
 .hamburger {
   display: none;
@@ -789,11 +808,6 @@ p {
   color: #dedede;
   padding-left: 30px;
   font-size: 20px;
-}
-
-.closeBtn,
-#home {
-  display: none;
 }
 
 .hvr-underline-from-left {
