@@ -22,6 +22,9 @@ $(document).ready(function() {
   $('#contact').click(function() {
     scroll_to('.contact');
   });
+  $('.downArrowWrapper').click(function() {
+    scroll_to('.about');
+  });
 
   // Arrow scroll to top
   $('.arrowWrapper').click(function() {
@@ -89,7 +92,7 @@ $(document).ready(function() {
     });
 
     $('.portfolio').each(function(i) {
-      var bottom_of_object = Math.floor($(this).offset().top) - 100;
+      var bottom_of_object = Math.floor($(this).offset().top) - 200;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         for (let j = 1; j < 4; j++) {
