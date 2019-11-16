@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  addOpacity("#pol", 4)
+  addHomeOpacity("#polHome")
 
   addArrow();
 
@@ -67,7 +67,7 @@ $(document).ready(function() {
   // About auto underline
   $(window).scroll(function() {
     $('.about').each(function(i) {
-      var bottom_of_object = Math.floor($(this).offset().top);
+      var bottom_of_object = Math.floor($(this).offset().top - 200);
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         $('.underlineWho').addClass('right');
@@ -84,7 +84,7 @@ $(document).ready(function() {
           $('.etc').addClass('right');
         }, 2300);
         setTimeout(function() {
-          for (let j = 1; j < 20; j++) {
+          for (let j = 1; j < 21; j++) {
             addHash(j);
           }
         }, 2500);
@@ -166,6 +166,12 @@ $(document).ready(function() {
     }, 500 * j);
   }
 
+  function addHomeOpacity(id) {
+    setTimeout(function() {
+      $(id).css('opacity', 1);
+    }, 1000);
+  }
+
   function addRight(id, j) {
     setTimeout(function() {
       $(id + j).addClass('right');
@@ -175,7 +181,7 @@ $(document).ready(function() {
   function scroll_to(div) {
     $('html, body').animate(
       {
-        scrollTop: $(div).offset().top
+        scrollTop: $(div).offset().top - 100
       },
       500
     );

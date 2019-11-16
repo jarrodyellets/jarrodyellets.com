@@ -25,7 +25,7 @@ body {
 
 .main-window {
   position: relative;
-  height: 95vh;
+  height: 100vh;
   margin: 20px 0;
   display: block;
   overflow: hidden;
@@ -139,7 +139,6 @@ body {
 .about {
   max-width: 1200px;
   margin: 80px auto 0 auto;
-  padding-top: 50px;
 }
 
 .aboutHeader {
@@ -423,7 +422,6 @@ p {
 .portfolio {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 50px;
 }
 
 .portfolioGrid {
@@ -557,7 +555,6 @@ p {
   max-width: 1200px;
   margin: 0 auto 100px auto;
   position: relative;
-  padding-top: 50px;
 }
 
 .contactWrapper {
@@ -767,6 +764,7 @@ p {
 }
 
 .links {
+  position: relative;
   text-decoration: none;
   color: var(--blue);
   font-size: 2.5em;
@@ -781,9 +779,55 @@ p {
   transition: all 0.3s;
 }
 
+.links:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 4px;
+  top: 22px;
+  left: -30px;
+  opacity: 0;
+  border-radius: 30%;
+  background: var(--red);
+  transform: rotate(3deg);
+  transform-origin: top left;
+  -webkit-transition: width 0.15s;
+  transition: width 0.15s;
+  z-index: 1001;
+}
+
+.links:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 4px;
+  top: 27px;
+  left: 100%;
+  opacity: 0;
+  border-radius: 30%;
+  background: var(--red);
+  transform: rotate(2deg);
+  transform-origin: top left;
+  -webkit-transition: width 0.15s;
+  transition: width 0.15s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  z-index: 1001;
+}
+
 .links:hover {
   color: var(--blue);
   text-decoration: none;
+}
+
+.links:hover:before {
+  width: 25px;
+  opacity: .7;
+}
+
+.links:hover:after {
+  width: 21px;
+  opacity: .7;
 }
 
 .menuImage {
@@ -821,34 +865,6 @@ p {
   color: #dedede;
   outline: none;
 }
-
-/* #home:hover {
-  -webkit-transform: rotate(-4deg);
-  transform: rotate(-4deg);
-  -webkit-box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
-}
-
-#about:hover {
-  -webkit-transform: rotate(5deg);
-  transform: rotate(5deg);
-  -webkit-box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
-}
-
-#portfolio:hover {
-  -webkit-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-  -webkit-box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
-}
-
-#contact:hover {
-  -webkit-transform: rotate(2deg);
-  transform: rotate(2deg);
-  -webkit-box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
-} */
 
 .hamburger {
   display: none;
