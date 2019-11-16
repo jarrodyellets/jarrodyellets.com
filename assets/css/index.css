@@ -869,7 +869,7 @@ p {
 .hamburger {
   display: none;
   text-decoration: none;
-  color: #dedede;
+  color: rgba(0, 0, 0, .8);
   padding-left: 30px;
   font-size: 20px;
 }
@@ -1251,7 +1251,7 @@ p {
 
   .main-window {
     margin: 0;
-    height: 100%;
+    height: auto;
   }
 
   .nav-bar {
@@ -1260,15 +1260,34 @@ p {
     top: 0;
     left: 0;
     right: 0;
+    height: 50px;
+    padding: 0 5%;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: #e3e3e9;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroAboutText {
+    font-size: .75em;
+  }
+
+  .profileImg {
+    max-width: 300px;
+  }
+
+  .menuImage {
+    width: 25px;
   }
 
   .navLinks {
     height: 100%;
     width: 170px;
     position: fixed;
-    z-index: 10;
+    z-index: 1002;
     top: 50px;
     right: -170px;
     display: -webkit-box;
@@ -1278,9 +1297,10 @@ p {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.7);
-    color: #dedede;
+    background-color: #e3e3e9;
+    opacity: 1;
     font-size: 1.2em;
+    border-left: 3px solid rgba(0, 0, 0, .8);
     overflow-x: hidden;
     padding-top: 10px;
     padding-left: 10px;
@@ -1312,11 +1332,16 @@ p {
   .links {
     display: inline-block;
     padding: 10px 0;
+    color: rgba(0, 0, 0, .8);
+    font-size: 2em;
   }
 
   .links:hover {
-    color: #dedede;
-    background: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, .7);
+  }
+
+  .links:hover:before, .links:hover:after {
+    display: none;
   }
 
   #mail-icon {
@@ -1342,18 +1367,18 @@ p {
   }
 
   .nav-bar .linksWrapper a:focus {
-    color: #dedede;
+    color: rgba(0, 0, 0, .8)
   }
 
   a:focus,
   a:hover {
-    color: #dedede;
+    color: rgba(0, 0, 0, .8);
     text-decoration: none;
   }
 
   .mobileToggle:hover,
   .mobileToggle:focus {
-    color: #dedede;
+    color: rgba(0, 0, 0, .8);
   }
 
   .sticky {
