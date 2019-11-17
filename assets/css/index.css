@@ -1429,6 +1429,7 @@ p {
 
   .heroAboutText {
     font-size: 0.75em;
+    font-weight: 700;
   }
 
   .profileImg {
@@ -1486,6 +1487,10 @@ p {
     font-size: 1.4em;
   }
 
+  .arrow {
+    width: 70px;
+  }
+
   #home {
     display: block;
   }
@@ -1519,7 +1524,7 @@ p {
   }
 
   .text {
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 700;
   }
 
