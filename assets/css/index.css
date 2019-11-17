@@ -1204,6 +1204,15 @@ p {
 
 @media screen and (max-width: 1300px) {
 
+  .nav-bar {
+    height: 60px;
+    padding: 20px 5%;
+  }
+
+  .main-window {
+    height: auto;
+  }
+
   .profileImg {
     max-width: 350px;
   }
@@ -1239,12 +1248,15 @@ p {
     width: 54px;
     height: 3px;
   }
+
+  .subHeader {
+    font-size: 2em;
+  }
 }
 
 @media screen and (max-width: 1100px) {
   .main-window {
     margin: 0;
-    height: auto;
   }
 
   .portfolioGrid {
