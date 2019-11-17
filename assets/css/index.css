@@ -5,7 +5,6 @@
   --green: rgba(1, 145, 94, 0.7);
   --purple: rgba(130, 4, 104, 0.7);
   --orange: rgba(255, 127, 0, 0.7);
-
 }
 
 html {
@@ -63,7 +62,7 @@ body {
   flex-direction: column;
   font-size: 2.4em;
   margin-left: 50px;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .heroSpan {
@@ -75,7 +74,7 @@ body {
   margin: 100px auto 0 auto;
   cursor: pointer;
   width: 100px;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .downArrow {
@@ -91,7 +90,7 @@ body {
 
 .downArrow:before {
   position: absolute;
-  content: "";
+  content: '';
   width: 5px;
   height: 0;
   bottom: 0;
@@ -107,7 +106,7 @@ body {
 
 .downArrow:after {
   position: absolute;
-  content: "";
+  content: '';
   width: 5px;
   height: 0;
   bottom: 0;
@@ -169,7 +168,7 @@ body {
 .subHeader {
   font-size: 2.4em;
   color: var(--red);
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .me {
@@ -405,7 +404,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.6;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 p {
@@ -568,7 +567,7 @@ p {
 
 .contactIcons {
   margin: 20px 0 50px 0;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .contactImage {
@@ -662,20 +661,20 @@ p {
 
 .nav-bar:before {
   position: absolute;
-  content: "";
+  content: '';
   width: 0;
   height: 3px;
   bottom: 0;
   left: 0;
   border-radius: 30%;
-  opacity: .8;
+  opacity: 0.8;
   background: var(--black);
   -webkit-transition: width 1.2s;
-  transition: width 1.2s; 
+  transition: width 1.2s;
 }
 
 .nav-bar.navLineWidth:before {
-  width: 100vw
+  width: 100vw;
 }
 
 .navFade {
@@ -694,7 +693,7 @@ p {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .navIcons {
@@ -713,7 +712,7 @@ p {
 
 .menu:before {
   position: absolute;
-  content: "";
+  content: '';
   width: 0;
   height: 4px;
   top: -7px;
@@ -730,7 +729,7 @@ p {
 
 .menu:after {
   position: absolute;
-  content: "";
+  content: '';
   width: 0;
   height: 4px;
   top: -4px;
@@ -749,12 +748,12 @@ p {
 
 .menu:hover:before {
   width: 65px;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .menu:hover:after {
   width: 70px;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .navLinks {
@@ -781,7 +780,7 @@ p {
 
 .links:before {
   position: absolute;
-  content: "";
+  content: '';
   width: 0;
   height: 4px;
   top: 22px;
@@ -798,7 +797,7 @@ p {
 
 .links:after {
   position: absolute;
-  content: "";
+  content: '';
   width: 0;
   height: 4px;
   top: 27px;
@@ -822,12 +821,12 @@ p {
 
 .links:hover:before {
   width: 25px;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .links:hover:after {
   width: 21px;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .menuImage {
@@ -869,7 +868,7 @@ p {
 .hamburger {
   display: none;
   text-decoration: none;
-  color: rgba(0, 0, 0, .8);
+  color: rgba(0, 0, 0, 0.8);
   padding-left: 30px;
   font-size: 20px;
 }
@@ -1204,7 +1203,42 @@ p {
   animation-iteration-count: 1;
 }
 
+@media screen and (max-width: 1300px) {
+  .links {
+    font-size: 1.8em;
+  }
+
+  .links:before {
+    height: 3px;
+    top: 15px;
+  }
+
+  .links:after {
+    height: 3px;
+    top: 19px;
+  }
+
+  .menuImage {
+    width: 30px;
+  }
+
+  .menu:hover:after {
+    width: 48px;
+    height: 3px;
+  }
+
+  .menu:hover:before {
+    width: 54px;
+    height: 3px;
+  }
+}
+
 @media screen and (max-width: 1100px) {
+  .main-window {
+    margin: 0;
+    height: auto;
+  }
+
   .portfolioGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1229,6 +1263,11 @@ p {
     margin-right: 0;
   }
 
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .tools {
     padding: 0;
   }
@@ -1239,19 +1278,13 @@ p {
 }
 
 @media screen and (max-width: 860px) {
+
+  body {
+    font-size: 24px;
+  }
+
   .button {
     font-size: 1em;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 20px;
-  }
-
-  .main-window {
-    margin: 0;
-    height: auto;
   }
 
   .nav-bar {
@@ -1266,30 +1299,13 @@ p {
     background-color: #e3e3e9;
   }
 
-  .hero {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .heroAboutText {
-    font-size: .75em;
-  }
-
-  .profileImg {
-    max-width: 300px;
-  }
-
-  .menuImage {
-    width: 25px;
-  }
-
   .navLinks {
     height: 100%;
-    width: 170px;
+    width: 200px;
     position: fixed;
     z-index: 1002;
     top: 50px;
-    right: -170px;
+    right: -200px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1300,7 +1316,7 @@ p {
     background-color: #e3e3e9;
     opacity: 1;
     font-size: 1.2em;
-    border-left: 3px solid rgba(0, 0, 0, .8);
+    border-left: 3px solid rgba(0, 0, 0, 0.8);
     overflow-x: hidden;
     padding-top: 10px;
     padding-left: 10px;
@@ -1310,13 +1326,72 @@ p {
     transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1);
   }
 
-  .rollOver,
-  .rolloverShow {
+  .width {
+    right: 0;
+  }
+
+  .links {
+    display: inline-block;
+    padding: 10px 0;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 2em;
+  }
+
+  .links:hover {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .links:hover:before,
+  .links:hover:after {
     display: none;
   }
 
-  .width {
-    right: 0;
+  .hamburger {
+    display: block;
+  }
+
+  .mobileToggle {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  .nav-bar .linksWrapper a:focus {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  a:focus,
+  a:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+  }
+
+  .mobileToggle:hover,
+  .mobileToggle:focus {
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  body {
+    font-size: 20px;
+  }
+
+  .heroAboutText {
+    font-size: 0.75em;
+  }
+
+  .profileImg {
+    max-width: 300px;
+  }
+
+  .menuImage {
+    width: 25px;
+  }
+
+  .rollOver,
+  .rolloverShow {
+    display: none;
   }
 
   #about:hover,
@@ -1327,21 +1402,6 @@ p {
     box-shadow: none;
     -webkit-transform: none;
     transform: none;
-  }
-
-  .links {
-    display: inline-block;
-    padding: 10px 0;
-    color: rgba(0, 0, 0, .8);
-    font-size: 2em;
-  }
-
-  .links:hover {
-    color: rgba(0, 0, 0, .7);
-  }
-
-  .links:hover:before, .links:hover:after {
-    display: none;
   }
 
   #mail-icon {
@@ -1355,30 +1415,6 @@ p {
 
   .navIcons {
     font-size: 1.9em;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .mobileToggle {
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-
-  .nav-bar .linksWrapper a:focus {
-    color: rgba(0, 0, 0, .8)
-  }
-
-  a:focus,
-  a:hover {
-    color: rgba(0, 0, 0, .8);
-    text-decoration: none;
-  }
-
-  .mobileToggle:hover,
-  .mobileToggle:focus {
-    color: rgba(0, 0, 0, .8);
   }
 
   .sticky {
@@ -1429,13 +1465,7 @@ p {
   }
 
   .tools {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  .toolEtc {
-    margin: 0 auto;
-    padding: 0 30%;
+    font-size: 16px;
   }
 
   .text {
@@ -1513,6 +1543,10 @@ p {
     height: 2px;
   }
 
+  .downArrow, .downArrow:before, .downArrow:after {
+    width: 3px;
+  }
+
   @media screen and (max-width: 700px) {
     .portfolioGrid {
       grid-template-columns: repeat(1, 1fr);
@@ -1523,9 +1557,15 @@ p {
     }
   }
 
+  @media screen and (max-width: 400px) {
+    .heroAboutText {
+      font-size: .6em;
+    }
+  }
+
   @media screen and (max-width: 320px) {
-    /* .stackText {
-    font-size: .9em;
-  } */
+    .tools {
+      font-size: 14px;
+    }
   }
 }
