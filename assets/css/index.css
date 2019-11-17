@@ -415,6 +415,7 @@ p {
   text-align: center;
   color: var(--purple);
   margin: 80px 0;
+  opacity: .8;
 }
 
 .portfolio {
@@ -1249,8 +1250,36 @@ p {
     height: 3px;
   }
 
+  .divider {
+    margin: 40px 0;
+  }
+
+  .aboutHeader {
+    font-size: 2.5em;
+  }
+
   .subHeader {
     font-size: 2em;
+  }
+
+  .contactIcons {
+    margin: 10px 0 20px 0;
+  }
+
+  .contactImage {
+    width: 40px;
+  }
+
+  .contactText {
+    font-size: 1.4em;
+  }
+
+  .contactEmail {
+    font-size: 1.4em;
+  }
+
+  .contactEmail:after {
+    bottom: 14px;
   }
 }
 
@@ -1499,6 +1528,10 @@ p {
 
   .toolsLeft {
     margin-right: 40px;
+  }
+
+  .portfolioGrid {
+    margin-top: 40px;
   }
 
   .portfolioImg {
