@@ -400,10 +400,9 @@ body {
 }
 
 .text {
-  font-size: 1em;
+  font-size: 1.4em;
   font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1.6;
+  line-height: 1.2;
   opacity: 0.8;
 }
 
@@ -513,7 +512,7 @@ p {
 .builtWith {
   color: var(--green);
   font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2em;
 }
 
 .buttonWrapper {
