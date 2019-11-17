@@ -1203,6 +1203,15 @@ p {
 }
 
 @media screen and (max-width: 1300px) {
+
+  .profileImg {
+    max-width: 350px;
+  }
+
+  .heroAbout {
+    font-size: 2em;
+  }
+
   .links {
     font-size: 1.8em;
   }
