@@ -1,6 +1,5 @@
-$(document).ready(function() {
-
-  addHomeOpacity("#polHome")
+$(document).ready(function () {
+  addHomeOpacity('#polHome');
 
   addArrow();
 
@@ -10,39 +9,39 @@ $(document).ready(function() {
   var mobileMenu = false;
 
   // Nav Bar auto scroll to section
-  $('#home').click(function() {
+  $('#home').click(function () {
     scroll_to('html');
   });
-  $('#about').click(function() {
+  $('#about').click(function () {
     scroll_to('.about');
   });
-  $('#portfolio').click(function() {
+  $('#portfolio').click(function () {
     scroll_to('.portfolio');
   });
-  $('#contact').click(function() {
+  $('#contact').click(function () {
     scroll_to('.contact');
   });
-  $('.downArrowWrapper').click(function() {
+  $('.downArrowWrapper').click(function () {
     scroll_to('.about');
   });
 
   // Arrow scroll to top
-  $('.arrowWrapper').click(function() {
+  $('.arrowWrapper').click(function () {
     $('html, body').animate(
       {
-        scrollTop: '0px'
+        scrollTop: '0px',
       },
       500
     );
   });
 
   // Hamburger nav btns
-  $('.hamburger').click(function() {
+  $('.hamburger').click(function () {
     mobileMenu = !mobileMenu;
     if (mobileMenu) {
       $('.navLinks').addClass('width');
       $('.mobileToggle').css('transform', 'translateX(50px');
-      setTimeout(function() {
+      setTimeout(function () {
         $('.mobileToggle').removeClass('fas fa-bars');
         $('.mobileToggle').addClass('fas fa-times');
         $('.mobileToggle').css('transform', 'translateX(0');
@@ -50,7 +49,7 @@ $(document).ready(function() {
     } else {
       $('.navLinks').removeClass('width');
       $('.mobileToggle').css('transform', 'translateX(50px');
-      setTimeout(function() {
+      setTimeout(function () {
         $('.mobileToggle').removeClass('fas fa-times');
         $('.mobileToggle').addClass('fas fa-bars');
         $('.mobileToggle').css('transform', 'translateX(0');
@@ -59,39 +58,39 @@ $(document).ready(function() {
   });
 
   if (width > 768) {
-    $('.arrowWrapper').mouseenter(function() {
+    $('.arrowWrapper').mouseenter(function () {
       $('.arrowFiller').css('height', '100%');
     });
   }
 
   // About auto underline
-  $(window).scroll(function() {
-    $('.about').each(function(i) {
+  $(window).scroll(function () {
+    $('.about').each(function (i) {
       var bottom_of_object = Math.floor($(this).offset().top - 200);
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
         $('.underlineWho').addClass('right');
-        setTimeout(function() {
+        setTimeout(function () {
           $('.underlineWhat').addClass('right');
         }, 800);
-        setTimeout(function() {
+        setTimeout(function () {
           $('.front').addClass('right');
         }, 1300);
-        setTimeout(function() {
+        setTimeout(function () {
           $('.back').addClass('right');
         }, 1800);
-        setTimeout(function() {
+        setTimeout(function () {
           $('.etc').addClass('right');
         }, 2300);
-        setTimeout(function() {
-          for (let j = 1; j < 21; j++) {
+        setTimeout(function () {
+          for (let j = 1; j < 23; j++) {
             addHash(j);
           }
         }, 2500);
       }
     });
 
-    $('.portfolio').each(function(i) {
+    $('.portfolio').each(function (i) {
       var bottom_of_object = Math.floor($(this).offset().top) - 200;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
@@ -101,7 +100,7 @@ $(document).ready(function() {
       }
     });
 
-    $('#built1').each(function(i) {
+    $('#built1').each(function (i) {
       var bottom_of_object = Math.floor($(this).offset().top) - 600;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
@@ -111,7 +110,7 @@ $(document).ready(function() {
       }
     });
 
-    $('#builtx1').each(function(i) {
+    $('#builtx1').each(function (i) {
       var bottom_of_object = Math.floor($(this).offset().top) - 600;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
@@ -121,7 +120,7 @@ $(document).ready(function() {
       }
     });
 
-    $('#pola1').each(function(i) {
+    $('#pola1').each(function (i) {
       var bottom_of_object = Math.floor($(this).offset().top) - 600;
       var bottom_of_window = $(window).scrollTop();
       if (bottom_of_window >= bottom_of_object) {
@@ -134,46 +133,46 @@ $(document).ready(function() {
 
   function addHash(j) {
     let delay = 450 * j;
-    setTimeout(function() {
+    setTimeout(function () {
       $('#stack' + j).addClass('widthx');
     }, delay);
-    setTimeout(function() {
+    setTimeout(function () {
       $('#stack' + j).addClass('width');
     }, delay + 200);
   }
 
   function addArrow() {
-    setTimeout(function() {
+    setTimeout(function () {
       $('.downArrow').addClass('arrowHeight3');
     }, 4100);
-    setTimeout(function() {
+    setTimeout(function () {
       $('.downArrow').addClass('arrowHeight1');
     }, 4300);
-    setTimeout(function() {
+    setTimeout(function () {
       $('.downArrow').addClass('arrowHeight2');
     }, 4600);
   }
 
   function addNavLine() {
-    setTimeout(function() {
+    setTimeout(function () {
       $('.nav-bar').addClass('navLineWidth');
     }, 3000);
   }
 
   function addOpacity(id, j) {
-    setTimeout(function() {
+    setTimeout(function () {
       $(id + j).css('opacity', 1);
     }, 500 * j);
   }
 
   function addHomeOpacity(id) {
-    setTimeout(function() {
+    setTimeout(function () {
       $(id).css('opacity', 1);
     }, 1000);
   }
 
   function addRight(id, j) {
-    setTimeout(function() {
+    setTimeout(function () {
       $(id + j).addClass('right');
     }, 800 * j);
   }
@@ -181,7 +180,7 @@ $(document).ready(function() {
   function scroll_to(div) {
     $('html, body').animate(
       {
-        scrollTop: $(div).offset().top - 100
+        scrollTop: $(div).offset().top - 100,
       },
       500
     );
